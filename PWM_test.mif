@@ -1,0 +1,30 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 9000;  -- 	IN    Switches
+           001 : 9821;  -- 	OUT   PWM
+           002 : 2800;  -- 	JUMP  Start
+           003 : 0000;  -- Zero:      DW 0
+           004 : FFFF;  -- NegOne:    DW -1
+           005 : 0001;  -- Bit0:      DW &B0000000001
+           006 : 0002;  -- Bit1:      DW &B0000000010
+           007 : 0004;  -- Bit2:      DW &B0000000100
+           008 : 0008;  -- Bit3:      DW &B0000001000
+           009 : 0010;  -- Bit4:      DW &B0000010000
+           00A : 0020;  -- Bit5:      DW &B0000100000
+           00B : 0040;  -- Bit6:      DW &B0001000000
+           00C : 0080;  -- Bit7:      DW &B0010000000
+           00D : 0100;  -- Bit8:      DW &B0100000000
+           00E : 0200;  -- Bit9:      DW &B1000000000
+           00F : 00FF;  -- LoByte:    DW &H00FF
+           010 : FF00;  -- HiByte:    DW &HFF00
+  END;
