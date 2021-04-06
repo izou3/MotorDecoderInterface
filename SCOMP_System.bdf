@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 1216 352 1392 368)
+	(rect 1280 320 1456 336)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "ENCODER_H1" (rect 5 0 80 12)(font "Arial" ))
 	(pt 176 8)
@@ -103,11 +103,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 1152 368 1216 392))
+	(annotation_block (location)(rect 1216 336 1280 360))
 )
 (pin
 	(input)
-	(rect 1216 384 1384 400)
+	(rect 1280 352 1448 368)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "ENCODER_H2" (rect 5 0 72 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -120,7 +120,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 1152 400 1216 424))
+	(annotation_block (location)(rect 1216 368 1280 392))
 )
 (pin
 	(output)
@@ -927,7 +927,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1488 352 1704 496)
+	(rect 1544 320 1760 464)
 	(text "QuadratureDecoder" (rect 5 0 100 12)(font "Arial" ))
 	(text "inst11" (rect 8 128 36 145)(font "Intel Clear" ))
 	(port
@@ -1553,52 +1553,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 864 896)
 )
 (connector
-	(text "IO_DATA[15..0]" (rect 1714 368 1787 385)(font "Intel Clear" ))
-	(pt 1704 384)
-	(pt 1800 384)
-	(bus)
-)
-(connector
-	(text "clk_10MHz" (rect 1418 400 1471 417)(font "Intel Clear" ))
-	(pt 1408 416)
-	(pt 1488 416)
-)
-(connector
-	(text "resetn" (rect 1418 416 1447 433)(font "Intel Clear" ))
-	(pt 1408 432)
-	(pt 1488 432)
-)
-(connector
-	(text "QUAD_EN" (rect 1416 432 1464 449)(font "Intel Clear" ))
-	(pt 1408 448)
-	(pt 1488 448)
-)
-(connector
-	(text "IO_WRITE" (rect 1418 448 1466 465)(font "Intel Clear" ))
-	(pt 1408 464)
-	(pt 1488 464)
-)
-(connector
-	(pt 1480 400)
-	(pt 1480 392)
-)
-(connector
-	(pt 1488 400)
-	(pt 1480 400)
-)
-(connector
-	(pt 1480 392)
-	(pt 1384 392)
-)
-(connector
-	(pt 1488 384)
-	(pt 1392 384)
-)
-(connector
-	(pt 1392 384)
-	(pt 1392 360)
-)
-(connector
 	(text "clk_10MHz" (rect 722 48 775 65)(font "Intel Clear" ))
 	(pt 712 64)
 	(pt 792 64)
@@ -1618,6 +1572,48 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1000 128)
 	(pt 1080 128)
 )
+(connector
+	(pt 1448 360)
+	(pt 1544 360)
+)
+(connector
+	(pt 1544 360)
+	(pt 1544 368)
+)
+(connector
+	(pt 1456 328)
+	(pt 1456 352)
+)
+(connector
+	(text "IO_DATA[15..0]" (rect 1770 336 1843 353)(font "Intel Clear" ))
+	(pt 1760 352)
+	(pt 1856 352)
+	(bus)
+)
+(connector
+	(pt 1456 352)
+	(pt 1544 352)
+)
+(connector
+	(text "clk_10MHz" (rect 1474 368 1527 385)(font "Intel Clear" ))
+	(pt 1464 384)
+	(pt 1544 384)
+)
+(connector
+	(text "resetn" (rect 1474 384 1503 401)(font "Intel Clear" ))
+	(pt 1464 400)
+	(pt 1544 400)
+)
+(connector
+	(text "QUAD_EN" (rect 1472 400 1520 417)(font "Intel Clear" ))
+	(pt 1464 416)
+	(pt 1544 416)
+)
+(connector
+	(text "IO_WRITE" (rect 1474 416 1522 433)(font "Intel Clear" ))
+	(pt 1464 432)
+	(pt 1544 432)
+)
 (junction (pt 488 952))
 (junction (pt 248 80))
 (title_block
@@ -1627,7 +1623,7 @@ https://fpgasoftware.intel.com/eula.
 	(section (rect 0 48 368 72)(text "DESIGNER" (rect 2 0 59 12)(font "Arial" ))(text "ECE 2031" (rect 56 2 146 20)(font "Arial" (font_size 12)))(border))
 	(section (rect 0 72 280 96)(text "NUMBER" (rect 2 0 49 12)(font "Arial" ))(text "1.00" (rect 56 1 85 17)(font "Arial" (font_size 10)))(border))
 	(section (rect 280 72 368 96)(text "REV" (rect 2 1 25 13)(font "Arial" ))(text "A" (rect 43 1 53 17)(font "Arial" (font_size 10)))(border))
-	(section (rect 0 96 240 120)(text "DATE" (rect 2 0 30 12)(font "Arial" ))(text "Sat Apr 03 12:16:16 2021" (rect 56 3 230 19)(font "Arial" (font_size 10)))(date)(border))
+	(section (rect 0 96 240 120)(text "DATE" (rect 2 0 30 12)(font "Arial" ))(text "Tue Apr 06 14:53:18 2021" (rect 56 3 231 19)(font "Arial" (font_size 10)))(date)(border))
 	(section (rect 240 96 310 120)(text "SHEET" (rect 2 0 37 12)(font "Arial" ))(text "1" (rect 55 5 63 21)(font "Arial" (font_size 10))))
 	(section (rect 310 96 368 120)(text "OF" (rect 10 0 25 12)(font "Arial" ))(text "1" (rect 34 4 42 20)(font "Arial" (font_size 10))))
 	(drawing
