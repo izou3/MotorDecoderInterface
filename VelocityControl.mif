@@ -1,0 +1,58 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 0826;  -- 	LOAD VelControlOn
+           001 : 3804;  -- 	JPOS Velocity
+           002 : 0827;  -- 	LOAD PosControlOn
+           003 : 3815;  -- 	JPOS Position
+           004 : 9000;  -- 	IN   Switches
+           005 : 9821;  -- 	OUT   PWM
+           006 : 8008;  -- 	CALL  ReadVelocity
+           007 : 2804;  -- 	JUMP  Velocity
+           008 : 8010;  -- 	CALL	Delay
+           009 : 90F1;  -- 	IN		Quad
+           00A : 9804;  -- 	OUT 	Hex0
+           00B : 202C;  -- 	SUB		OldPos
+           00C : 9805;  -- 	OUT		Hex1
+           00D : 90F1;  -- 	IN 		Quad 
+           00E : 102C;  -- 	STORE	OldPos
+           00F : 8800;  -- 	RETURN
+           010 : 9802;  -- 	OUT	Timer ; writing something to timer resets it to 0 
+           011 : 9002;  -- 	IN	Timer		; time counts up to 10 in 1 sec or at 10 Hz 
+           012 : 6FFF;  -- 	ADDI	-1 		; waiting 1/10 of a second 
+           013 : 3011;  -- 	JNEG	WaitingLoop
+           014 : 8800;  -- 	RETURN
+           015 : 9000;  -- 	IN   Switches
+           016 : 9821;  -- 	OUT   PWM
+           017 : 90F1;  -- 	IN    Quad
+           018 : 8020;  -- 	CALL  Abs
+           019 : 9804;  -- 	OUT   Hex0
+           01A : 202A;  -- 	SUB   PosControl
+           01B : 401D;  -- 	JZERO End
+           01C : 2815;  -- 	JUMP  Position
+           01D : 0824;  -- 	LOAD  Zero
+           01E : 9821;  -- 	OUT   PWM
+           01F : 281D;  -- 	JUMP  End
+           020 : 3823;  -- 	JPOS   Abs_r        ; If already positive, return
+           021 : 5825;  -- 	XOR    NegOne       ; Flip all bits
+           022 : 6801;  -- 	ADDI   1            ; Add one
+           023 : 8800;  -- 	RETURN
+           024 : 0000;  -- Zero:      DW 0
+           025 : FFFF;  -- NegOne:    DW -1
+           026 : 0001;  -- VelControlOn:    DW 1
+           027 : 0000;  -- PosControlOn:	 DW 0
+           028 : 000F;  -- VelControl:      DW &B01111
+           029 : 0019;  -- PosControlSpeed: DW &B11001
+           02A : 021C;  -- PosControl:      DW 540
+           02B : 0000;  -- Countprev:	 	 DW 0
+           02C : 0000;  -- OldPos: 		 DW 0 
+  END;
