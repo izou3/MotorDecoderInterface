@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Tue Apr 06 15:18:07 2021
+Tue Apr 06 22:25:33 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -24,7 +24,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  16. General Register Statistics
  17. Inverted Register Statistics
  18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_hnr3:auto_generated
+ 19. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated
  20. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
  21. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
  22. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 06 15:18:07 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 06 22:25:33 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
@@ -176,63 +176,61 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/I2C_INTERFACE.bdf       ;         ;
-; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd          ;         ;
-; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd            ;         ;
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd            ;         ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd             ;         ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd              ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd             ;         ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/TIMER.vhd               ;         ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd          ;         ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd               ;         ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP_System.bdf        ;         ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd            ;         ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/HEX_DISP_6.bdf          ;         ;
-; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd         ;         ;
-; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd   ;         ;
-; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd        ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v    ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_hnr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/altsyncram_hnr3.tdf  ;         ;
-; PWM_test.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PWM_test.mif            ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf       ;         ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/lpm_clshift_fuc.tdf  ;         ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_bustri.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/I2C_INTERFACE.bdf      ;         ;
+; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd         ;         ;
+; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd           ;         ;
+; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd           ;         ;
+; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd            ;         ;
+; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd             ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd            ;         ;
+; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd              ;         ;
+; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd         ;         ;
+; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd              ;         ;
+; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP_System.bdf       ;         ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd           ;         ;
+; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP_6.bdf         ;         ;
+; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd        ;         ;
+; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd  ;         ;
+; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd       ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf                  ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/aglobal191.inc              ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_pll.inc             ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratixii_pll.inc           ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/cycloneii_pll.inc           ;         ;
+; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_ram_block.inc       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_mux.inc                 ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_decode.inc              ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/a_rdenreg.inc               ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altrom.inc                  ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altram.inc                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altdpram.inc                ;         ;
+; db/altsyncram_efs3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/altsyncram_efs3.tdf ;         ;
+; velocitycontrol.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/velocitycontrol.mif    ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf             ;         ;
+; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/lpm_clshift_fuc.tdf ;         ;
+; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_bustri.tdf              ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -298,7 +296,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |QuadratureDecoder:inst11|             ; 55 (55)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
 ;    |SCOMP:inst|                           ; 482 (406)           ; 177 (177)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
-;          |altsyncram_hnr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_hnr3:auto_generated ; altsyncram_hnr3   ; work         ;
+;          |altsyncram_efs3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated ; altsyncram_efs3   ; work         ;
 ;       |lpm_clshift:shifter|               ; 76 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
 ;          |lpm_clshift_fuc:auto_generated| ; 76 (76)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
 ;    |TIMER:inst4|                          ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
@@ -307,13 +305,13 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                             ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+--------------+
-; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF          ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+--------------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_hnr3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; PWM_test.mif ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------------+
+; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                 ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------------+
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; VelocityControl.mif ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -491,7 +489,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_hnr3:auto_generated ;
+; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -916,7 +914,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
-; INIT_FILE                          ; PWM_test.mif         ; Untyped                     ;
+; INIT_FILE                          ; VelocityControl.mif  ; Untyped                     ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
@@ -929,7 +927,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_hnr3      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_efs3      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1082,7 +1080,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1092,61 +1090,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Apr 06 15:17:56 2021
+    Info: Processing started: Tue Apr 06 22:24:58 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_interface.bdf
     Info (12023): Found entity 1: I2C_INTERFACE
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 49
-    Info (12023): Found entity 1: i2c_master File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 31
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 49
+    Info (12023): Found entity 1: i2c_master File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_ctrl.vhd
-    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd Line: 32
-    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd Line: 11
+    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd Line: 32
+    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
-    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd Line: 17
-    Info (12023): Found entity 1: HEX_DISP File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd Line: 9
+    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd Line: 17
+    Info (12023): Found entity 1: HEX_DISP File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
-    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd Line: 26
-    Info (12023): Found entity 1: DIG_OUT File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd Line: 16
+    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd Line: 26
+    Info (12023): Found entity 1: DIG_OUT File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
-    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd Line: 18
-    Info (12023): Found entity 1: DIG_IN File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd Line: 10
+    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd Line: 18
+    Info (12023): Found entity 1: DIG_IN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 21
-    Info (12023): Found entity 1: clk_div File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 6
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 21
+    Info (12023): Found entity 1: clk_div File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: TIMER-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 27
-    Info (12023): Found entity 1: TIMER File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 17
+    Info (12022): Found design unit 1: TIMER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 27
+    Info (12023): Found entity 1: TIMER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 31
-    Info (12023): Found entity 1: IO_DECODER File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 9
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 31
+    Info (12023): Found entity 1: IO_DECODER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
-    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 33
-    Info (12023): Found entity 1: SCOMP File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 16
+    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 33
+    Info (12023): Found entity 1: SCOMP File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file scomp_system.bdf
     Info (12023): Found entity 1: SCOMP_System
 Info (12021): Found 2 design units, including 1 entities, in source file pll_main.vhd
-    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 54
-    Info (12023): Found entity 1: PLL_main File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 43
+    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 54
+    Info (12023): Found entity 1: PLL_main File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file hex_disp_6.bdf
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 2 design units, including 1 entities, in source file incrementer.vhd
-    Info (12022): Found design unit 1: Incrementer-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd Line: 27
-    Info (12023): Found entity 1: Incrementer File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd Line: 13
+    Info (12022): Found design unit 1: Incrementer-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd Line: 27
+    Info (12023): Found entity 1: Incrementer File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file quadraturedecoder.vhd
-    Info (12022): Found design unit 1: QuadratureDecoder-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd Line: 28
-    Info (12023): Found entity 1: QuadratureDecoder File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd Line: 13
+    Info (12022): Found design unit 1: QuadratureDecoder-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd Line: 28
+    Info (12023): Found entity 1: QuadratureDecoder File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file pwmgenerator.vhd
-    Info (12022): Found design unit 1: PWM_GEN-a File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd Line: 24
-    Info (12023): Found entity 1: PWM_GEN File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd Line: 15
+    Info (12022): Found design unit 1: PWM_GEN-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd Line: 24
+    Info (12023): Found entity 1: PWM_GEN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd Line: 15
+Warning (12019): Can't analyze file -- file output_files/PositionControl.vhd is missing
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "PWM_GEN" for hierarchy "PWM_GEN:inst14"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
-Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
-Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1203,13 +1202,13 @@ Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component"
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_main_altpll.v
-    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v Line: 31
-Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v Line: 31
+Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "IO_DECODER" for hierarchy "IO_DECODER:inst3"
 Info (12128): Elaborating entity "SCOMP" for hierarchy "SCOMP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
-Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1230,7 +1229,7 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "PWM_test.mif"
+    Info (12134): Parameter "init_file" = "VelocityControl.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "2048"
@@ -1260,34 +1259,28 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hnr3.tdf
-    Info (12023): Found entity 1: altsyncram_hnr3 File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/altsyncram_hnr3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_hnr3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_hnr3:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 5 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 5 warnings found, and 5 warnings are reported. File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/PWM_test.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/ Line: 13
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/ Line: 14
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/ Line: 15
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/ Line: 16
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/ Line: 17
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_efs3.tdf
+    Info (12023): Found entity 1: altsyncram_efs3 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/altsyncram_efs3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_efs3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_WIDTHDIST" = "4"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "arithmetic"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_fuc.tdf
-    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/lpm_clshift_fuc.tdf Line: 23
-Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
-Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
+    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/lpm_clshift_fuc.tdf Line: 23
+Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
+Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_TYPE" = "LPM_BUSTRI"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
-Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 59
 Info (12128): Elaborating entity "DIG_IN" for hierarchy "DIG_IN:inst7"
 Info (12128): Elaborating entity "I2C_INTERFACE" for hierarchy "I2C_INTERFACE:inst13"
 Info (12128): Elaborating entity "i2c_master" for hierarchy "I2C_INTERFACE:inst13|i2c_master:inst"
@@ -1314,7 +1307,7 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[14]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[15]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15]" into an OR gate
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 57
+Info (13000): Registers with preset signals will power-up high File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 57
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GSENSOR_CS_n" is stuck at VCC
@@ -1330,10 +1323,10 @@ Info (21057): Implemented 1184 device resources after synthesis - the final reso
     Info (21061): Implemented 1092 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Tue Apr 06 15:18:07 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Tue Apr 06 22:25:33 2021
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:06
 
 
