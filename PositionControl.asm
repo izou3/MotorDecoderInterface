@@ -3,37 +3,31 @@
 
 ORG 0
 Start:
-	LOAD VelControlOn
-	JPOS Velocity
 	LOAD PosControlOn
 	JPOS Position
 	
-Velocity:	
-	; IN   Switches
-	LOAD  VelControl 
-	OUT   PWM
-	
-	IN    Quad
-	OUT   Hex0
-	
-	JUMP  Velocity
-	
 Position:
-	IN   Switches
-	; LOAD  PosControlSpeed
-	OUT   PWM
-	
+
 	IN 	  Quad
 	CALL  Abs
 	OUT   Hex0
 	SUB   PosControl
 	JZERO End
 	
+	; IN   Switches
+	LOAD  PosControlSpeed
+	OUT   PWM
+	
 	JUMP  Position
 
 End:
 	LOAD  Zero
 	OUT   PWM
+	
+	; IN Quad
+	; CALL Abs
+	; OUT Hex1
+	
 	JUMP  End
 	
 Abs:
@@ -48,6 +42,7 @@ Abs_r:
 ; IO address constants
 Switches:  EQU &H000
 Hex0:      EQU &H004
+Hex1:      EQU &H005
 PWM:       EQU &H021
 Quad:      EQU &H0F1
 
@@ -57,6 +52,8 @@ NegOne:    DW -1
 
 VelControlOn:    DW 0
 PosControlOn:	 DW 1
+PosControlSpeed: DW &B10000
+
 VelControl:      DW &B01111
-PosControlSpeed: DW &B11001
-PosControl:      DW 540
+PosControl:      DW 1080
+; DirControl:		 DW 

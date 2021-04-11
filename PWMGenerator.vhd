@@ -22,19 +22,20 @@ ENTITY PWM_GEN IS
 END PWM_GEN;
 
 ARCHITECTURE a OF PWM_GEN IS
-    SIGNAL COUNT    : STD_LOGIC_VECTOR(4 DOWNTO 0);
-    SIGNAL COMPARE  : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    SIGNAL COUNT    : STD_LOGIC_VECTOR(6 DOWNTO 0);
+    SIGNAL COMPARE  : STD_LOGIC_VECTOR(6 DOWNTO 0);
 
     BEGIN
 
     IO_Handler: PROCESS (RESETN, CS)
+	 
     BEGIN
         -- Create a register to store the data sent from SCOMP
         IF (RESETN = '0') THEN
-            COMPARE <= "00000";
+            COMPARE <= "0000000";
         ELSIF rising_edge(CS) THEN
             -- When written to, latch IO_DATA into the compare register.
-            COMPARE <= IO_DATA(4 DOWNTO 0);
+            COMPARE <= IO_DATA(6 DOWNTO 0);
         END IF;
 
     END PROCESS;
@@ -55,7 +56,7 @@ ARCHITECTURE a OF PWM_GEN IS
 				END IF;
 
             -- todo: on overflow, set the output high
-				IF (COUNT = "11111") THEN
+				IF (COUNT = "1111111") THEN
 					PWM_OUT <= '1';
 				END IF;
 
@@ -64,5 +65,6 @@ ARCHITECTURE a OF PWM_GEN IS
 
         END IF;
     END PROCESS;
+	
 
 END a;

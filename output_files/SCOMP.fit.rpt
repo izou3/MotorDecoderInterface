@@ -1,5 +1,5 @@
 Fitter report for SCOMP
-Tue Apr 06 22:27:02 2021
+Sun Apr 11 14:59:53 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -74,17 +74,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Apr 06 22:27:02 2021       ;
+; Fitter Status                      ; Successful - Sun Apr 11 14:59:53 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,026 / 49,760 ( 2 % )                      ;
-;     Total combinational functions  ; 945 / 49,760 ( 2 % )                        ;
-;     Dedicated logic registers      ; 456 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 456                                         ;
+; Total logic elements               ; 1,042 / 49,760 ( 2 % )                      ;
+;     Total combinational functions  ; 959 / 49,760 ( 2 % )                        ;
+;     Dedicated logic registers      ; 459 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 459                                         ;
 ; Total pins                         ; 75 / 360 ( 21 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,768 / 1,677,312 ( 2 % )                  ;
@@ -159,17 +159,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.13        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.5%      ;
-;     Processor 3            ;   3.9%      ;
-;     Processor 4            ;   3.8%      ;
+;     Processor 2            ;   2.8%      ;
+;     Processor 3            ;   2.7%      ;
+;     Processor 4            ;   2.6%      ;
+;     Processor 5            ;   2.6%      ;
+;     Processor 6            ;   2.6%      ;
 +----------------------------+-------------+
 
 
@@ -193,8 +195,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1599 ) ; 0.00 % ( 0 / 1599 )        ; 0.00 % ( 0 / 1599 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1599 ) ; 0.00 % ( 0 / 1599 )        ; 0.00 % ( 0 / 1599 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1616 ) ; 0.00 % ( 0 / 1616 )        ; 0.00 % ( 0 / 1616 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1616 ) ; 0.00 % ( 0 / 1616 )        ; 0.00 % ( 0 / 1616 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -217,7 +219,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1581 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1598 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 18 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -225,7 +227,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/output_files/SCOMP.pin.
+The pin-out file can be found in C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/output_files/SCOMP.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -233,26 +235,26 @@ The pin-out file can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/Mot
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Total logic elements                        ; 1,026 / 49,760 ( 2 % )     ;
-;     -- Combinational with no register       ; 570                        ;
-;     -- Register only                        ; 81                         ;
-;     -- Combinational with a register        ; 375                        ;
+; Total logic elements                        ; 1,042 / 49,760 ( 2 % )     ;
+;     -- Combinational with no register       ; 583                        ;
+;     -- Register only                        ; 83                         ;
+;     -- Combinational with a register        ; 376                        ;
 ;                                             ;                            ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 507                        ;
-;     -- 3 input functions                    ; 294                        ;
-;     -- <=2 input functions                  ; 144                        ;
-;     -- Register only                        ; 81                         ;
+;     -- 4 input functions                    ; 509                        ;
+;     -- 3 input functions                    ; 308                        ;
+;     -- <=2 input functions                  ; 142                        ;
+;     -- Register only                        ; 83                         ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 841                        ;
-;     -- arithmetic mode                      ; 104                        ;
+;     -- normal mode                          ; 854                        ;
+;     -- arithmetic mode                      ; 105                        ;
 ;                                             ;                            ;
-; Total registers*                            ; 456 / 51,509 ( < 1 % )     ;
-;     -- Dedicated logic registers            ; 456 / 49,760 ( < 1 % )     ;
+; Total registers*                            ; 459 / 51,509 ( < 1 % )     ;
+;     -- Dedicated logic registers            ; 459 / 49,760 ( < 1 % )     ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )          ;
 ;                                             ;                            ;
-; Total LABs:  partially or completely used   ; 77 / 3,110 ( 2 % )         ;
+; Total LABs:  partially or completely used   ; 81 / 3,110 ( 3 % )         ;
 ; Virtual pins                                ; 0                          ;
 ; I/O pins                                    ; 75 / 360 ( 21 % )          ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )             ;
@@ -272,12 +274,12 @@ The pin-out file can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/Mot
 ; Remote update blocks                        ; 0 / 1 ( 0 % )              ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )              ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )              ;
-; Average interconnect usage (total/H/V)      ; 1.3% / 1.2% / 1.5%         ;
-; Peak interconnect usage (total/H/V)         ; 23.8% / 21.3% / 27.4%      ;
-; Maximum fan-out                             ; 263                        ;
+; Average interconnect usage (total/H/V)      ; 1.3% / 1.1% / 1.6%         ;
+; Peak interconnect usage (total/H/V)         ; 22.9% / 20.5% / 26.3%      ;
+; Maximum fan-out                             ; 262                        ;
 ; Highest non-global fan-out                  ; 112                        ;
-; Total fan-out                               ; 4836                       ;
-; Average fan-out                             ; 2.91                       ;
+; Total fan-out                               ; 4899                       ;
+; Average fan-out                             ; 2.90                       ;
 +---------------------------------------------+----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -290,26 +292,26 @@ The pin-out file can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/Mot
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 1026 / 49760 ( 2 % )  ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 570                   ; 0                              ;
-;     -- Register only                        ; 81                    ; 0                              ;
-;     -- Combinational with a register        ; 375                   ; 0                              ;
+; Total logic elements                        ; 1042 / 49760 ( 2 % )  ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 583                   ; 0                              ;
+;     -- Register only                        ; 83                    ; 0                              ;
+;     -- Combinational with a register        ; 376                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 507                   ; 0                              ;
-;     -- 3 input functions                    ; 294                   ; 0                              ;
-;     -- <=2 input functions                  ; 144                   ; 0                              ;
-;     -- Register only                        ; 81                    ; 0                              ;
+;     -- 4 input functions                    ; 509                   ; 0                              ;
+;     -- 3 input functions                    ; 308                   ; 0                              ;
+;     -- <=2 input functions                  ; 142                   ; 0                              ;
+;     -- Register only                        ; 83                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 841                   ; 0                              ;
-;     -- arithmetic mode                      ; 104                   ; 0                              ;
+;     -- normal mode                          ; 854                   ; 0                              ;
+;     -- arithmetic mode                      ; 105                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 456                   ; 0                              ;
-;     -- Dedicated logic registers            ; 456 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 459                   ; 0                              ;
+;     -- Dedicated logic registers            ; 459 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 77 / 3110 ( 2 % )     ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 81 / 3110 ( 3 % )     ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 75                    ; 0                              ;
@@ -323,18 +325,18 @@ The pin-out file can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/Mot
 ; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )       ; 0 / 2 ( 0 % )                  ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
-;     -- Input Connections                    ; 274                   ; 2                              ;
-;     -- Registered Input Connections         ; 260                   ; 0                              ;
-;     -- Output Connections                   ; 4                     ; 272                            ;
+;     -- Input Connections                    ; 273                   ; 2                              ;
+;     -- Registered Input Connections         ; 259                   ; 0                              ;
+;     -- Output Connections                   ; 4                     ; 271                            ;
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 4863                  ; 284                            ;
-;     -- Registered Connections               ; 2248                  ; 0                              ;
+;     -- Total Connections                    ; 4926                  ; 283                            ;
+;     -- Registered Connections               ; 2268                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
-;     -- Top                                  ; 4                     ; 274                            ;
-;     -- hard_block:auto_generated_inst       ; 274                   ; 0                              ;
+;     -- Top                                  ; 4                     ; 273                            ;
+;     -- hard_block:auto_generated_inst       ; 273                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 15                    ; 2                              ;
@@ -1105,33 +1107,34 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
-; |SCOMP_System                             ; 1026 (1)    ; 456 (0)                   ; 0 (0)         ; 32768       ; 4    ; 1          ; 0            ; 0       ; 0         ; 75   ; 0            ; 570 (1)      ; 81 (0)            ; 375 (0)          ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
+; |SCOMP_System                             ; 1042 (1)    ; 459 (0)                   ; 0 (0)         ; 32768       ; 4    ; 1          ; 0            ; 0       ; 0         ; 75   ; 0            ; 583 (1)      ; 83 (0)            ; 376 (0)          ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
 ;    |DIG_IN:inst7|                         ; 10 (10)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 0          ; |SCOMP_System|DIG_IN:inst7                                                              ; DIG_IN            ; work         ;
-;    |DIG_OUT:inst6|                        ; 10 (10)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 9 (9)             ; 1 (1)            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                             ; DIG_OUT           ; work         ;
-;    |HEX_DISP_6:inst9|                     ; 62 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (0)       ; 13 (0)            ; 11 (0)           ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6        ; work         ;
+;    |DIG_OUT:inst6|                        ; 10 (10)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 3 (3)            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                             ; DIG_OUT           ; work         ;
+;    |HEX_DISP_6:inst9|                     ; 63 (0)      ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 39 (0)       ; 15 (0)            ; 9 (0)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6        ; work         ;
 ;       |HEX_DISP:inst1|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 4 (4)             ; 0 (0)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                           ; HEX_DISP          ; work         ;
-;       |HEX_DISP:inst2|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 4 (4)             ; 0 (0)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP          ; work         ;
-;       |HEX_DISP:inst3|                    ; 8 (8)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                           ; HEX_DISP          ; work         ;
-;       |HEX_DISP:inst4|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 4 (4)             ; 0 (0)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP          ; work         ;
-;       |HEX_DISP:inst5|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 4 (4)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP          ; work         ;
-;       |HEX_DISP:inst6|                    ; 10 (10)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 1 (1)             ; 3 (3)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP          ; work         ;
-;    |I2C_INTERFACE:inst13|                 ; 287 (90)    ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 148 (74)     ; 37 (0)            ; 102 (16)         ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
-;       |i2c_ctrl:inst14|                   ; 89 (89)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 28 (28)           ; 43 (43)          ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl          ; work         ;
-;       |i2c_master:inst|                   ; 111 (111)   ; 55 (55)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (56)      ; 9 (9)             ; 46 (46)          ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                      ; i2c_master        ; work         ;
-;    |IO_DECODER:inst3|                     ; 18 (18)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 10 (10)          ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER        ; work         ;
-;    |Incrementer:inst10|                   ; 19 (19)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 19 (19)          ; 0          ; |SCOMP_System|Incrementer:inst10                                                        ; Incrementer       ; work         ;
+;       |HEX_DISP:inst2|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 2 (2)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP          ; work         ;
+;       |HEX_DISP:inst3|                    ; 9 (9)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 4 (4)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                           ; HEX_DISP          ; work         ;
+;       |HEX_DISP:inst4|                    ; 10 (10)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 2 (2)             ; 2 (2)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP          ; work         ;
+;       |HEX_DISP:inst5|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 4 (4)             ; 0 (0)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP          ; work         ;
+;       |HEX_DISP:inst6|                    ; 11 (11)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 3 (3)             ; 1 (1)            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP          ; work         ;
+;    |I2C_INTERFACE:inst13|                 ; 296 (92)    ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (75)     ; 42 (0)            ; 100 (17)         ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
+;       |i2c_ctrl:inst14|                   ; 92 (92)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 30 (30)           ; 41 (41)          ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl          ; work         ;
+;       |i2c_master:inst|                   ; 114 (114)   ; 55 (55)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 58 (58)      ; 12 (12)           ; 44 (44)          ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                      ; i2c_master        ; work         ;
+;    |IO_DECODER:inst3|                     ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 4 (4)            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER        ; work         ;
+;    |Incrementer:inst10|                   ; 20 (20)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 19 (19)          ; 0          ; |SCOMP_System|Incrementer:inst10                                                        ; Incrementer       ; work         ;
 ;    |PLL_main:inst1|                       ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0          ; |SCOMP_System|PLL_main:inst1                                                            ; PLL_main          ; work         ;
 ;       |altpll:altpll_component|           ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                    ; altpll            ; work         ;
 ;          |PLL_main_altpll:auto_generated| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated     ; PLL_main_altpll   ; work         ;
-;    |PWM_GEN:inst14|                       ; 15 (15)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 5 (5)             ; 6 (6)            ; 0          ; |SCOMP_System|PWM_GEN:inst14                                                            ; PWM_GEN           ; work         ;
-;    |QuadratureDecoder:inst11|             ; 57 (57)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 2 (2)             ; 25 (25)          ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
-;    |SCOMP:inst|                           ; 506 (430)   ; 177 (177)                 ; 0 (0)         ; 32768       ; 4    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 328 (252)    ; 12 (12)           ; 166 (166)        ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
+;    |PWM_GEN:inst14|                       ; 17 (17)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 2 (2)             ; 13 (13)          ; 0          ; |SCOMP_System|PWM_GEN:inst14                                                            ; PWM_GEN           ; work         ;
+;    |QuadratureDecoder:inst11|             ; 57 (57)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 2 (2)             ; 24 (24)          ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
+;    |SCOMP:inst|                           ; 507 (429)   ; 177 (177)                 ; 0 (0)         ; 32768       ; 4    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 326 (250)    ; 11 (11)           ; 170 (168)        ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
 ;          |altsyncram_efs3:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated ; altsyncram_efs3   ; work         ;
-;       |lpm_clshift:shifter|               ; 76 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 76 (76)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (76)      ; 0 (0)             ; 0 (0)            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
-;    |TIMER:inst4|                          ; 18 (18)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 17 (17)          ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
-;    |clk_div:inst5|                        ; 52 (52)     ; 40 (40)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 3 (3)             ; 37 (37)          ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div           ; work         ;
+;       |lpm_clshift:shifter|               ; 78 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (0)       ; 0 (0)             ; 2 (0)            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 78 (78)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (76)      ; 0 (0)             ; 2 (2)            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
+;    |TIMER:inst4|                          ; 22 (18)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (1)        ; 0 (0)             ; 17 (17)          ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
+;       |lpm_bustri:IO_BUS|                 ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0          ; |SCOMP_System|TIMER:inst4|lpm_bustri:IO_BUS                                             ; lpm_bustri        ; work         ;
+;    |clk_div:inst5|                        ; 51 (51)     ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 3 (3)             ; 36 (36)          ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div           ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1199,22 +1202,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[2]      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[1]      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[0]      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; GSENSOR_SDI  ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; GSENSOR_SDI  ; Bidir    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; GSENSOR_SCLK ; Bidir    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; SW[9]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; SW[8]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; SW[7]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; SW[0]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; KEY1         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; SW[0]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; KEY1         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; KEY0         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; clock_50     ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SW[1]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; SW[1]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; SW[2]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; SW[3]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; SW[3]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; SW[4]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; SW[5]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; SW[6]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; ENCODER_H1   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; SW[5]        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; SW[6]        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; ENCODER_H1   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; ENCODER_H2   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 +--------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1225,15 +1228,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                                        ; Pad To Core Index ; Setting ;
 +--------------------------------------------------------------------------------------------+-------------------+---------+
 ; GSENSOR_SDI                                                                                ;                   ;         ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[0]~0                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|Selector29~0                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[1]~1                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[2]~2                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[3]~3                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[4]~4                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[5]~5                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[6]~6                                   ; 1                 ; 6       ;
-;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[7]~7                                   ; 1                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[0]~0                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|Selector29~0                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[1]~1                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[2]~2                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[3]~3                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[4]~4                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[5]~5                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[6]~6                                   ; 0                 ; 6       ;
+;      - I2C_INTERFACE:inst13|i2c_master:inst|data_rx[7]~7                                   ; 0                 ; 6       ;
 ; GSENSOR_SCLK                                                                               ;                   ;         ;
 ;      - I2C_INTERFACE:inst13|i2c_master:inst|stretch~0                                      ; 1                 ; 6       ;
 ; SW[9]                                                                                      ;                   ;         ;
@@ -1246,30 +1249,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - DIG_IN:inst7|B_DI[7]                                                                ; 0                 ; 6       ;
 ;      - IN2~output                                                                          ; 0                 ; 6       ;
 ; SW[0]                                                                                      ;                   ;         ;
-;      - DIG_IN:inst7|B_DI[0]                                                                ; 1                 ; 6       ;
+;      - DIG_IN:inst7|B_DI[0]                                                                ; 0                 ; 6       ;
 ; KEY1                                                                                       ;                   ;         ;
-;      - Incrementer:inst10|state.BTN_high                                                   ; 0                 ; 6       ;
-;      - Incrementer:inst10|count[15]~18                                                     ; 0                 ; 6       ;
+;      - Incrementer:inst10|state.BTN_high                                                   ; 1                 ; 6       ;
+;      - Incrementer:inst10|count[9]~18                                                      ; 1                 ; 6       ;
 ; KEY0                                                                                       ;                   ;         ;
 ;      - PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|pll_lock_sync ; 1                 ; 6       ;
 ;      - PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|pll1          ; 1                 ; 6       ;
 ; clock_50                                                                                   ;                   ;         ;
 ; SW[1]                                                                                      ;                   ;         ;
-;      - DIG_IN:inst7|B_DI[1]                                                                ; 1                 ; 6       ;
+;      - DIG_IN:inst7|B_DI[1]                                                                ; 0                 ; 6       ;
 ; SW[2]                                                                                      ;                   ;         ;
 ;      - DIG_IN:inst7|B_DI[2]                                                                ; 1                 ; 6       ;
 ; SW[3]                                                                                      ;                   ;         ;
-;      - DIG_IN:inst7|B_DI[3]                                                                ; 0                 ; 6       ;
+;      - DIG_IN:inst7|B_DI[3]                                                                ; 1                 ; 6       ;
 ; SW[4]                                                                                      ;                   ;         ;
 ;      - DIG_IN:inst7|B_DI[4]                                                                ; 1                 ; 6       ;
 ; SW[5]                                                                                      ;                   ;         ;
-;      - DIG_IN:inst7|B_DI[5]                                                                ; 0                 ; 6       ;
+;      - DIG_IN:inst7|B_DI[5]                                                                ; 1                 ; 6       ;
 ; SW[6]                                                                                      ;                   ;         ;
-;      - DIG_IN:inst7|B_DI[6]                                                                ; 1                 ; 6       ;
+;      - DIG_IN:inst7|B_DI[6]                                                                ; 0                 ; 6       ;
 ; ENCODER_H1                                                                                 ;                   ;         ;
-;      - QuadratureDecoder:inst11|AB1[1]~feeder                                              ; 1                 ; 6       ;
+;      - QuadratureDecoder:inst11|AB1[1]~feeder                                              ; 0                 ; 6       ;
 ; ENCODER_H2                                                                                 ;                   ;         ;
-;      - QuadratureDecoder:inst11|AB1[0]                                                     ; 1                 ; 6       ;
+;      - QuadratureDecoder:inst11|AB1[0]~feeder                                              ; 1                 ; 6       ;
 +--------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1278,42 +1281,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                   ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[15]~11                                   ; LCCOMB_X50_Y38_N6  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X49_Y38_N10 ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X49_Y38_N10 ; 163     ; Async. clear ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~2                                     ; LCCOMB_X50_Y38_N12 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|latch_rdy~0                                       ; LCCOMB_X49_Y38_N4  ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_addr[7]~1                                      ; LCCOMB_X51_Y35_N28 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[7]~1                                      ; LCCOMB_X51_Y37_N14 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_master:inst|WideOr12~0                                        ; LCCOMB_X46_Y35_N0  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[7]~3                                      ; LCCOMB_X50_Y35_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                                          ; FF_X49_Y38_N13     ; 50      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; I2C_INTERFACE:inst13|i2c_master:inst|state~14                                          ; LCCOMB_X46_Y35_N26 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_INTERFACE:inst13|inst12                                                            ; LCCOMB_X51_Y43_N22 ; 11      ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; I2C_INTERFACE:inst13|inst13                                                            ; LCCOMB_X51_Y39_N8  ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; I2C_INTERFACE:inst13|inst6                                                             ; LCCOMB_X51_Y43_N18 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; IO_DECODER:inst3|HEX0_EN                                                               ; LCCOMB_X50_Y43_N28 ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; IO_DECODER:inst3|HEX1_EN                                                               ; LCCOMB_X50_Y43_N30 ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; IO_DECODER:inst3|LED_EN                                                                ; LCCOMB_X50_Y43_N2  ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; IO_DECODER:inst3|PWM_EN                                                                ; LCCOMB_X50_Y43_N12 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; IO_DECODER:inst3|SWITCH_EN                                                             ; LCCOMB_X50_Y43_N0  ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; Incrementer:inst10|count[15]~18                                                        ; LCCOMB_X49_Y46_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[15]~11                                   ; LCCOMB_X60_Y36_N14 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X56_Y38_N28 ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X56_Y38_N28 ; 165     ; Async. clear ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~2                                     ; LCCOMB_X61_Y36_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|latch_rdy~0                                       ; LCCOMB_X56_Y38_N6  ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_addr[7]~1                                      ; LCCOMB_X58_Y36_N12 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[7]~1                                      ; LCCOMB_X62_Y36_N10 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_master:inst|WideOr12~0                                        ; LCCOMB_X56_Y35_N24 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[7]~3                                      ; LCCOMB_X55_Y36_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                                          ; FF_X56_Y38_N3      ; 50      ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; I2C_INTERFACE:inst13|i2c_master:inst|state~14                                          ; LCCOMB_X56_Y35_N12 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_INTERFACE:inst13|inst12                                                            ; LCCOMB_X58_Y38_N18 ; 11      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; I2C_INTERFACE:inst13|inst13                                                            ; LCCOMB_X58_Y38_N28 ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; I2C_INTERFACE:inst13|inst6                                                             ; LCCOMB_X57_Y38_N2  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; IO_DECODER:inst3|HEX0_EN                                                               ; LCCOMB_X57_Y38_N16 ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; IO_DECODER:inst3|HEX1_EN                                                               ; LCCOMB_X57_Y38_N12 ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; IO_DECODER:inst3|LED_EN                                                                ; LCCOMB_X58_Y38_N26 ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; IO_DECODER:inst3|PWM_EN                                                                ; LCCOMB_X58_Y38_N4  ; 7       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; IO_DECODER:inst3|SWITCH_EN                                                             ; LCCOMB_X58_Y38_N22 ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; Incrementer:inst10|count[9]~18                                                         ; LCCOMB_X57_Y39_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; KEY0                                                                                   ; PIN_B8             ; 2       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 263     ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 262     ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
 ; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_locked ; PLL_4              ; 9       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; QuadratureDecoder:inst11|count[9]~18                                                   ; LCCOMB_X51_Y46_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|IR[0]~0                                                                     ; LCCOMB_X49_Y42_N0  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|MW                                                                          ; FF_X49_Y40_N3      ; 5       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC[0]~2                                                                     ; LCCOMB_X45_Y42_N6  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC_stack[0][0]~0                                                            ; LCCOMB_X55_Y43_N16 ; 99      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC_stack[9][0]~1                                                            ; LCCOMB_X55_Y43_N20 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TIMER:inst4|process_0~0                                                                ; LCCOMB_X51_Y43_N6  ; 16      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|LessThan0~1                                                              ; LCCOMB_X2_Y38_N28  ; 6       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|LessThan1~2                                                              ; LCCOMB_X44_Y1_N24  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|LessThan4~6                                                              ; LCCOMB_X1_Y37_N24  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|clock_100kHz                                                             ; FF_X1_Y38_N7       ; 47      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; clk_div:inst5|clock_10Hz                                                               ; FF_X1_Y38_N9       ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; clk_div:inst5|clock_10kHz                                                              ; FF_X45_Y1_N1       ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK16           ; --                        ;
+; QuadratureDecoder:inst11|count[7]~18                                                   ; LCCOMB_X51_Y38_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|IR[0]~0                                                                     ; LCCOMB_X56_Y38_N18 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|MW                                                                          ; FF_X54_Y38_N23     ; 5       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC[0]~2                                                                     ; LCCOMB_X58_Y39_N14 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC_stack[0][0]~0                                                            ; LCCOMB_X55_Y42_N10 ; 99      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC_stack[9][0]~1                                                            ; LCCOMB_X55_Y42_N8  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; TIMER:inst4|process_0~0                                                                ; LCCOMB_X59_Y40_N26 ; 16      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|LessThan0~1                                                              ; LCCOMB_X1_Y38_N24  ; 6       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|LessThan1~2                                                              ; LCCOMB_X45_Y1_N24  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|LessThan5~6                                                              ; LCCOMB_X1_Y36_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|clock_100kHz                                                             ; FF_X1_Y38_N15      ; 47      ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; clk_div:inst5|clock_10Hz                                                               ; FF_X2_Y38_N3       ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; clk_div:inst5|clock_25kHz                                                              ; FF_X45_Y1_N23      ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 ; clock_50                                                                               ; PIN_N14            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1323,19 +1326,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                                   ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X49_Y38_N10 ; 163     ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                                          ; FF_X49_Y38_N13     ; 50      ; 17                                   ; Global Clock         ; GCLK9            ; --                        ;
-; I2C_INTERFACE:inst13|inst12                                                            ; LCCOMB_X51_Y43_N22 ; 11      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; I2C_INTERFACE:inst13|inst13                                                            ; LCCOMB_X51_Y39_N8  ; 16      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; IO_DECODER:inst3|HEX0_EN                                                               ; LCCOMB_X50_Y43_N28 ; 16      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-; IO_DECODER:inst3|HEX1_EN                                                               ; LCCOMB_X50_Y43_N30 ; 8       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
-; IO_DECODER:inst3|LED_EN                                                                ; LCCOMB_X50_Y43_N2  ; 10      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
-; IO_DECODER:inst3|PWM_EN                                                                ; LCCOMB_X50_Y43_N12 ; 5       ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
-; IO_DECODER:inst3|SWITCH_EN                                                             ; LCCOMB_X50_Y43_N0  ; 10      ; 0                                    ; Global Clock         ; GCLK12           ; --                        ;
-; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 263     ; 14                                   ; Global Clock         ; GCLK8            ; --                        ;
-; clk_div:inst5|clock_100kHz                                                             ; FF_X1_Y38_N7       ; 47      ; 8                                    ; Global Clock         ; GCLK1            ; --                        ;
-; clk_div:inst5|clock_10Hz                                                               ; FF_X1_Y38_N9       ; 16      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; clk_div:inst5|clock_10kHz                                                              ; FF_X45_Y1_N1       ; 6       ; 6                                    ; Global Clock         ; GCLK16           ; --                        ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0                                     ; LCCOMB_X56_Y38_N28 ; 165     ; 0                                    ; Global Clock         ; GCLK12           ; --                        ;
+; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                                          ; FF_X56_Y38_N3      ; 50      ; 9                                    ; Global Clock         ; GCLK14           ; --                        ;
+; I2C_INTERFACE:inst13|inst12                                                            ; LCCOMB_X58_Y38_N18 ; 11      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; I2C_INTERFACE:inst13|inst13                                                            ; LCCOMB_X58_Y38_N28 ; 16      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
+; IO_DECODER:inst3|HEX0_EN                                                               ; LCCOMB_X57_Y38_N16 ; 16      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; IO_DECODER:inst3|HEX1_EN                                                               ; LCCOMB_X57_Y38_N12 ; 8       ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
+; IO_DECODER:inst3|LED_EN                                                                ; LCCOMB_X58_Y38_N26 ; 10      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; IO_DECODER:inst3|PWM_EN                                                                ; LCCOMB_X58_Y38_N4  ; 7       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
+; IO_DECODER:inst3|SWITCH_EN                                                             ; LCCOMB_X58_Y38_N22 ; 10      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 262     ; 28                                   ; Global Clock         ; GCLK8            ; --                        ;
+; clk_div:inst5|clock_100kHz                                                             ; FF_X1_Y38_N15      ; 47      ; 3                                    ; Global Clock         ; GCLK0            ; --                        ;
+; clk_div:inst5|clock_10Hz                                                               ; FF_X2_Y38_N3       ; 16      ; 1                                    ; Global Clock         ; GCLK2            ; --                        ;
+; clk_div:inst5|clock_25kHz                                                              ; FF_X45_Y1_N23      ; 8       ; 8                                    ; Global Clock         ; GCLK19           ; --                        ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1344,7 +1347,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                 ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                 ; Location                                                       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 2048         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 2048                        ; 16                          ; --                          ; --                          ; 32768               ; 4    ; VelocityControl.mif ; M9K_X53_Y39_N0, M9K_X53_Y42_N0, M9K_X53_Y40_N0, M9K_X53_Y41_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 2048         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 2048                        ; 16                          ; --                          ; --                          ; 32768               ; 4    ; VelocityControl.mif ; M9K_X53_Y41_N0, M9K_X53_Y40_N0, M9K_X53_Y38_N0, M9K_X53_Y39_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1355,12 +1358,12 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-;0;(0000100000101000) (4050) (2088) (828)    ;(0011100000000100) (34004) (14340) (3804)   ;(0000100000101001) (4051) (2089) (829)   ;(0011100000010111) (34027) (14359) (3817)   ;(1001000000000000) (110000) (36864) (9000)   ;(1001100000100001) (114041) (38945) (9821)   ;(1001000011110001) (110361) (37105) (90F1)   ;(1001100000000100) (114004) (38916) (9804)   ;
-;8;(1000000000001010) (100012) (32778) (800A)    ;(0010100000000100) (24004) (10244) (2804)   ;(1000000000010010) (100022) (32786) (8012)   ;(1001000011110001) (110361) (37105) (90F1)   ;(0010000000101101) (20055) (8237) (202D)   ;(0110000000000001) (60001) (24577) (6001)   ;(1001100000000101) (114005) (38917) (9805)   ;(1001000011110001) (110361) (37105) (90F1)   ;
-;16;(0001000000101101) (10055) (4141) (102D)    ;(1000100000000000) (104000) (34816) (8800)   ;(1001100000000010) (114002) (38914) (9802)   ;(1001000000000010) (110002) (36866) (9002)   ;(0110111111111110) (67776) (28670) (6FFE)   ;(0011000000010011) (30023) (12307) (3013)   ;(1000100000000000) (104000) (34816) (8800)   ;(1001000000000000) (110000) (36864) (9000)   ;
-;24;(1001100000100001) (114041) (38945) (9821)    ;(1001000011110001) (110361) (37105) (90F1)   ;(1000000000100010) (100042) (32802) (8022)   ;(1001100000000100) (114004) (38916) (9804)   ;(0010000000101100) (20054) (8236) (202C)   ;(0100000000011111) (40037) (16415) (401F)   ;(0010100000010111) (24027) (10263) (2817)   ;(0000100000100110) (4046) (2086) (826)   ;
-;32;(1001100000100001) (114041) (38945) (9821)    ;(0010100000011111) (24037) (10271) (281F)   ;(0011100000100101) (34045) (14373) (3825)   ;(0101100000100111) (54047) (22567) (5827)   ;(0110100000000001) (64001) (26625) (6801)   ;(1000100000000000) (104000) (34816) (8800)   ;(0000000000000000) (0) (0) (00)   ;(1111111111111111) (177777) (65535) (FFFF)   ;
-;40;(0000000000000001) (1) (1) (01)    ;(0000000000000000) (0) (0) (00)   ;(0000000000001111) (17) (15) (0F)   ;(0000000000011001) (31) (25) (19)   ;(0000001000011100) (1034) (540) (21C)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
+;0;(0000100000100110) (4046) (2086) (826)    ;(0011100000000100) (34004) (14340) (3804)   ;(0000100000100111) (4047) (2087) (827)   ;(0011100000010101) (34025) (14357) (3815)   ;(1001000000000000) (110000) (36864) (9000)   ;(1001100000100001) (114041) (38945) (9821)   ;(1000000000001000) (100010) (32776) (8008)   ;(0010100000000100) (24004) (10244) (2804)   ;
+;8;(1000000000010000) (100020) (32784) (8010)    ;(1001000011110001) (110361) (37105) (90F1)   ;(1001100000000100) (114004) (38916) (9804)   ;(0010000000101100) (20054) (8236) (202C)   ;(1001100000000101) (114005) (38917) (9805)   ;(1001000011110001) (110361) (37105) (90F1)   ;(0001000000101100) (10054) (4140) (102C)   ;(1000100000000000) (104000) (34816) (8800)   ;
+;16;(1001100000000010) (114002) (38914) (9802)    ;(1001000000000010) (110002) (36866) (9002)   ;(0110111111111111) (67777) (28671) (6FFF)   ;(0011000000010001) (30021) (12305) (3011)   ;(1000100000000000) (104000) (34816) (8800)   ;(1001000000000000) (110000) (36864) (9000)   ;(1001100000100001) (114041) (38945) (9821)   ;(1001000011110001) (110361) (37105) (90F1)   ;
+;24;(1000000000100000) (100040) (32800) (8020)    ;(1001100000000100) (114004) (38916) (9804)   ;(0010000000101010) (20052) (8234) (202A)   ;(0100000000011101) (40035) (16413) (401D)   ;(0010100000010101) (24025) (10261) (2815)   ;(0000100000100100) (4044) (2084) (824)   ;(1001100000100001) (114041) (38945) (9821)   ;(0010100000011101) (24035) (10269) (281D)   ;
+;32;(0011100000100011) (34043) (14371) (3823)    ;(0101100000100101) (54045) (22565) (5825)   ;(0110100000000001) (64001) (26625) (6801)   ;(1000100000000000) (104000) (34816) (8800)   ;(0000000000000000) (0) (0) (00)   ;(1111111111111111) (177777) (65535) (FFFF)   ;(0000000000000001) (1) (1) (01)   ;(0000000000000000) (0) (0) (00)   ;
+;40;(0000000000001111) (17) (15) (0F)    ;(0000000000011001) (31) (25) (19)   ;(0000001000011100) (1034) (540) (21C)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;48;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;56;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 ;64;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
@@ -1613,173 +1616,177 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ;2040;(0000000000000000) (0) (0) (00)    ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;(0000000000000000) (0) (0) (00)   ;
 
 
-+-------------------------------------------------+
-; Routing Usage Summary                           ;
-+-----------------------+-------------------------+
-; Routing Resource Type ; Usage                   ;
-+-----------------------+-------------------------+
-; Block interconnects   ; 1,495 / 148,641 ( 1 % ) ;
-; C16 interconnects     ; 105 / 5,382 ( 2 % )     ;
-; C4 interconnects      ; 1,393 / 106,704 ( 1 % ) ;
-; Direct links          ; 161 / 148,641 ( < 1 % ) ;
-; Global clocks         ; 13 / 20 ( 65 % )        ;
-; Local interconnects   ; 562 / 49,760 ( 1 % )    ;
-; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 81 / 5,406 ( 1 % )      ;
-; R4 interconnects      ; 1,510 / 147,764 ( 1 % ) ;
-+-----------------------+-------------------------+
++---------------------------------------------------+
+; Routing Usage Summary                             ;
++-----------------------+---------------------------+
+; Routing Resource Type ; Usage                     ;
++-----------------------+---------------------------+
+; Block interconnects   ; 1,521 / 148,641 ( 1 % )   ;
+; C16 interconnects     ; 119 / 5,382 ( 2 % )       ;
+; C4 interconnects      ; 1,451 / 106,704 ( 1 % )   ;
+; Direct links          ; 187 / 148,641 ( < 1 % )   ;
+; Global clocks         ; 13 / 20 ( 65 % )          ;
+; Local interconnects   ; 569 / 49,760 ( 1 % )      ;
+; NSLEEPs               ; 0 / 500 ( 0 % )           ;
+; R24 interconnects     ; 88 / 5,406 ( 2 % )        ;
+; R4 interconnects      ; 1,426 / 147,764 ( < 1 % ) ;
++-----------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.32) ; Number of LABs  (Total = 77) ;
+; Number of Logic Elements  (Average = 12.86) ; Number of LABs  (Total = 81) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 4                            ;
-; 2                                           ; 4                            ;
+; 1                                           ; 8                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 3                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 7                            ;
-; 15                                          ; 10                           ;
-; 16                                          ; 41                           ;
+; 12                                          ; 5                            ;
+; 13                                          ; 4                            ;
+; 14                                          ; 8                            ;
+; 15                                          ; 7                            ;
+; 16                                          ; 39                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.61) ; Number of LABs  (Total = 77) ;
+; LAB-wide Signals  (Average = 1.75) ; Number of LABs  (Total = 81) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 38                           ;
-; 1 Clock                            ; 40                           ;
-; 1 Clock enable                     ; 15                           ;
+; 1 Clock                            ; 44                           ;
+; 1 Clock enable                     ; 26                           ;
 ; 1 Sync. clear                      ; 1                            ;
-; 2 Clock enables                    ; 11                           ;
-; 2 Clocks                           ; 19                           ;
+; 2 Clock enables                    ; 10                           ;
+; 2 Clocks                           ; 23                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 19.10) ; Number of LABs  (Total = 77) ;
+; Number of Signals Sourced  (Average = 18.49) ; Number of LABs  (Total = 81) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 4                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 2                            ;
+; 1                                            ; 3                            ;
+; 2                                            ; 5                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 7                            ;
-; 16                                           ; 12                           ;
+; 14                                           ; 3                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 11                           ;
 ; 17                                           ; 3                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 5                            ;
-; 21                                           ; 5                            ;
-; 22                                           ; 4                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 7                            ;
+; 20                                           ; 3                            ;
+; 21                                           ; 6                            ;
+; 22                                           ; 6                            ;
 ; 23                                           ; 3                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 3                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 2                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 3                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 5                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 5                            ;
+; 31                                           ; 1                            ;
+; 32                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.84) ; Number of LABs  (Total = 77) ;
+; Number of Signals Sourced Out  (Average = 7.64) ; Number of LABs  (Total = 81) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 7                            ;
-; 2                                               ; 7                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 5                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 9                            ;
-; 7                                               ; 9                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 5                            ;
-; 10                                              ; 5                            ;
+; 1                                               ; 12                           ;
+; 2                                               ; 3                            ;
+; 3                                               ; 3                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 12                           ;
+; 7                                               ; 4                            ;
+; 8                                               ; 6                            ;
+; 9                                               ; 8                            ;
+; 10                                              ; 8                            ;
 ; 11                                              ; 6                            ;
-; 12                                              ; 4                            ;
-; 13                                              ; 3                            ;
-; 14                                              ; 1                            ;
+; 12                                              ; 3                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 3                            ;
 ; 15                                              ; 2                            ;
-; 16                                              ; 4                            ;
-; 17                                              ; 0                            ;
+; 16                                              ; 2                            ;
+; 17                                              ; 2                            ;
 ; 18                                              ; 0                            ;
 ; 19                                              ; 0                            ;
-; 20                                              ; 1                            ;
+; 20                                              ; 0                            ;
 ; 21                                              ; 0                            ;
 ; 22                                              ; 0                            ;
-; 23                                              ; 1                            ;
+; 23                                              ; 0                            ;
+; 24                                              ; 0                            ;
+; 25                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.49) ; Number of LABs  (Total = 77) ;
+; Number of Distinct Inputs  (Average = 15.47) ; Number of LABs  (Total = 81) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 2                            ;
-; 2                                            ; 3                            ;
+; 2                                            ; 4                            ;
 ; 3                                            ; 5                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 3                            ;
-; 7                                            ; 0                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 4                            ;
-; 9                                            ; 4                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 4                            ;
-; 18                                           ; 5                            ;
+; 9                                            ; 3                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 4                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 7                            ;
 ; 19                                           ; 2                            ;
 ; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 2                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 3                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 3                            ;
-; 25                                           ; 2                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 4                            ;
 ; 26                                           ; 2                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 3                            ;
-; 29                                           ; 3                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 3                            ;
+; 27                                           ; 3                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 2                            ;
+; 31                                           ; 1                            ;
 ; 32                                           ; 1                            ;
-; 33                                           ; 1                            ;
+; 33                                           ; 2                            ;
+; 34                                           ; 1                            ;
+; 35                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1963,137 +1970,138 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                                                                           ; Destination Clock(s)                                                  ; Delay Added in ns ;
 +---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
-; inst1|altpll_component|auto_generated|pll1|clk[0]                                                                         ; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE ; 445.9             ;
-; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_10Hz,clk_div:inst5|clock_100kHz,SCOMP:inst|IO_CYCLE ; SCOMP:inst|IO_CYCLE                                                   ; 87.8              ;
-; inst1|altpll_component|auto_generated|pll1|clk[0]                                                                         ; SCOMP:inst|IO_CYCLE                                                   ; 38.8              ;
-; clk_div:inst5|clock_100kHz                                                                                                ; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                         ; 37.2              ;
-; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_10Hz,clk_div:inst5|clock_100kHz                     ; SCOMP:inst|IO_CYCLE                                                   ; 23.7              ;
-; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_100kHz                                              ; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE ; 15.3              ;
-; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_100kHz                                              ; SCOMP:inst|IO_CYCLE                                                   ; 12.3              ;
-; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE                                                     ; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE ; 11.0              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0]                                                                         ; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE ; 484.4             ;
+; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_10Hz,clk_div:inst5|clock_100kHz,SCOMP:inst|IO_CYCLE ; SCOMP:inst|IO_CYCLE                                                   ; 109.5             ;
+; inst1|altpll_component|auto_generated|pll1|clk[0]                                                                         ; SCOMP:inst|IO_CYCLE                                                   ; 67.2              ;
+; clk_div:inst5|clock_100kHz                                                                                                ; I2C_INTERFACE:inst13|i2c_master:inst|data_clk                         ; 41.6              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_10Hz,clk_div:inst5|clock_100kHz                     ; SCOMP:inst|IO_CYCLE                                                   ; 23.4              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_10Hz                                                ; SCOMP:inst|IO_CYCLE                                                   ; 17.1              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE                                                     ; inst1|altpll_component|auto_generated|pll1|clk[0],SCOMP:inst|IO_CYCLE ; 11.4              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0],clk_div:inst5|clock_100kHz                                              ; SCOMP:inst|IO_CYCLE                                                   ; 10.9              ;
+; inst1|altpll_component|auto_generated|pll1|clk[0]                                                                         ; clk_div:inst5|clock_10Hz                                              ; 8.9               ;
 +---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                            ;
-+---------------------------------------------------+--------------------------------------------------+-------------------+
-; Source Register                                   ; Destination Register                             ; Delay Added in ns ;
-+---------------------------------------------------+--------------------------------------------------+-------------------+
-; SCOMP:inst|AC[13]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 8.782             ;
-; SCOMP:inst|AC[10]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 8.673             ;
-; SCOMP:inst|AC[12]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12] ; 8.546             ;
-; SCOMP:inst|IO_WRITE_int                           ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 8.325             ;
-; QuadratureDecoder:inst11|count[13]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 8.323             ;
-; Incrementer:inst10|count[13]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 8.296             ;
-; SCOMP:inst|AC[8]                                  ; DIG_OUT:inst6|DATA[8]                            ; 8.274             ;
-; SCOMP:inst|IR[0]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 8.215             ;
-; SCOMP:inst|AC[14]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14] ; 8.091             ;
-; SCOMP:inst|AC[0]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 8.037             ;
-; SCOMP:inst|AC[9]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 7.962             ;
-; SCOMP:inst|AC[11]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11] ; 7.926             ;
-; SCOMP:inst|AC[15]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15] ; 7.825             ;
-; SCOMP:inst|IR[1]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 7.820             ;
-; Incrementer:inst10|count[0]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 7.816             ;
-; SCOMP:inst|AC[5]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 7.803             ;
-; Incrementer:inst10|count[12]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12] ; 7.777             ;
-; Incrementer:inst10|count[6]                       ; DIG_OUT:inst6|DATA[6]                            ; 7.765             ;
-; QuadratureDecoder:inst11|count[0]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 7.721             ;
-; SCOMP:inst|AC[7]                                  ; DIG_OUT:inst6|DATA[7]                            ; 7.717             ;
-; SCOMP:inst|AC[2]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 7.668             ;
-; SCOMP:inst|IR[7]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 7.630             ;
-; SCOMP:inst|AC[6]                                  ; DIG_OUT:inst6|DATA[6]                            ; 7.622             ;
-; SCOMP:inst|AC[1]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[1]   ; 7.614             ;
-; SCOMP:inst|AC[3]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[3]   ; 7.612             ;
-; Incrementer:inst10|count[9]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 7.590             ;
-; Incrementer:inst10|count[10]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.583             ;
-; QuadratureDecoder:inst11|count[10]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.533             ;
-; QuadratureDecoder:inst11|count[1]                 ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[1]   ; 7.471             ;
-; QuadratureDecoder:inst11|count[2]                 ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 7.453             ;
-; QuadratureDecoder:inst11|count[3]                 ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[3]   ; 7.422             ;
-; SCOMP:inst|IR[5]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.402             ;
-; QuadratureDecoder:inst11|count[7]                 ; DIG_OUT:inst6|DATA[7]                            ; 7.386             ;
-; QuadratureDecoder:inst11|count[9]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 7.385             ;
-; SCOMP:inst|IR[6]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.381             ;
-; QuadratureDecoder:inst11|count[6]                 ; DIG_OUT:inst6|DATA[6]                            ; 7.375             ;
-; SCOMP:inst|IR[2]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.330             ;
-; SCOMP:inst|IR[3]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.330             ;
-; Incrementer:inst10|count[4]                       ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[0]   ; 7.316             ;
-; Incrementer:inst10|count[1]                       ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[1]   ; 7.310             ;
-; SCOMP:inst|IO_CYCLE                               ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.305             ;
-; SCOMP:inst|IR[10]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.305             ;
-; SCOMP:inst|IR[9]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.305             ;
-; SCOMP:inst|IR[8]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.305             ;
-; SCOMP:inst|IR[4]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 7.305             ;
-; Incrementer:inst10|count[7]                       ; DIG_OUT:inst6|DATA[7]                            ; 7.291             ;
-; QuadratureDecoder:inst11|count[12]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12] ; 7.276             ;
-; QuadratureDecoder:inst11|count[5]                 ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 7.273             ;
-; QuadratureDecoder:inst11|count[14]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14] ; 7.235             ;
-; SCOMP:inst|AC[4]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[0]   ; 7.212             ;
-; Incrementer:inst10|count[14]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14] ; 7.204             ;
-; Incrementer:inst10|count[8]                       ; DIG_OUT:inst6|DATA[8]                            ; 7.199             ;
-; QuadratureDecoder:inst11|count[4]                 ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[0]   ; 7.145             ;
-; Incrementer:inst10|count[11]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11] ; 7.106             ;
-; Incrementer:inst10|count[3]                       ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[3]   ; 7.020             ;
-; QuadratureDecoder:inst11|count[11]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11] ; 6.979             ;
-; Incrementer:inst10|count[2]                       ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 6.916             ;
-; QuadratureDecoder:inst11|count[8]                 ; DIG_OUT:inst6|DATA[8]                            ; 6.899             ;
-; Incrementer:inst10|count[5]                       ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 6.798             ;
-; Incrementer:inst10|count[15]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15] ; 6.465             ;
-; QuadratureDecoder:inst11|count[15]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15] ; 6.322             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[9]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 5.318             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[0]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 5.113             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[3]  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[3]   ; 5.069             ;
-; DIG_IN:inst7|B_DI[3]                              ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[3]   ; 5.056             ;
-; DIG_IN:inst7|B_DI[1]                              ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[1]   ; 5.053             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[1]  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[1]   ; 5.053             ;
-; DIG_IN:inst7|B_DI[6]                              ; DIG_OUT:inst6|DATA[6]                            ; 5.040             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[6]  ; DIG_OUT:inst6|DATA[6]                            ; 4.921             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]  ; DIG_OUT:inst6|DATA[7]                            ; 4.877             ;
-; DIG_IN:inst7|B_DI[4]                              ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[0]   ; 4.864             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[4]  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[0]   ; 4.735             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[13] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 4.716             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[5]  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 4.711             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[10] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 4.681             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[2]  ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 4.661             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[8]  ; DIG_OUT:inst6|DATA[8]                            ; 4.635             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[12] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12] ; 4.559             ;
-; DIG_IN:inst7|B_DI[8]                              ; DIG_OUT:inst6|DATA[8]                            ; 4.532             ;
-; DIG_IN:inst7|B_DI[9]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 4.487             ;
-; DIG_IN:inst7|B_DI[7]                              ; DIG_OUT:inst6|DATA[7]                            ; 4.112             ;
-; DIG_IN:inst7|B_DI[2]                              ; HEX_DISP_6:inst9|HEX_DISP:inst5|latched_hex[2]   ; 3.983             ;
-; DIG_IN:inst7|B_DI[5]                              ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 3.935             ;
-; TIMER:inst4|COUNT[11]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11] ; 3.905             ;
-; TIMER:inst4|COUNT[10]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10] ; 3.722             ;
-; DIG_IN:inst7|B_DI[0]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 3.704             ;
-; TIMER:inst4|COUNT[13]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13] ; 3.644             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[15] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15] ; 3.466             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[11] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11] ; 3.453             ;
-; TIMER:inst4|COUNT[12]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12] ; 3.437             ;
-; TIMER:inst4|COUNT[15]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15] ; 3.423             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[14] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14] ; 3.398             ;
-; TIMER:inst4|COUNT[9]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[9]  ; 3.342             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|running      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 3.332             ;
-; I2C_INTERFACE:inst13|i2c_ctrl:inst14|go           ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 3.332             ;
-; TIMER:inst4|COUNT[0]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[0]  ; 3.332             ;
-; TIMER:inst4|COUNT[14]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14] ; 3.273             ;
-; TIMER:inst4|COUNT[7]                              ; DIG_OUT:inst6|DATA[7]                            ; 3.019             ;
-; TIMER:inst4|COUNT[6]                              ; DIG_OUT:inst6|DATA[6]                            ; 2.887             ;
-; TIMER:inst4|COUNT[5]                              ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[1]   ; 2.833             ;
-+---------------------------------------------------+--------------------------------------------------+-------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                           ;
++---------------------------------------------------+-------------------------------------------------+-------------------+
+; Source Register                                   ; Destination Register                            ; Delay Added in ns ;
++---------------------------------------------------+-------------------------------------------------+-------------------+
+; SCOMP:inst|AC[9]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 9.018             ;
+; SCOMP:inst|AC[10]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.884             ;
+; Incrementer:inst10|count[9]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 8.850             ;
+; SCOMP:inst|IO_WRITE_int                           ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 8.836             ;
+; SCOMP:inst|AC[2]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 8.713             ;
+; SCOMP:inst|IR[0]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 8.655             ;
+; SCOMP:inst|AC[7]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 8.536             ;
+; Incrementer:inst10|count[2]                       ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 8.494             ;
+; Incrementer:inst10|count[7]                       ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 8.465             ;
+; SCOMP:inst|AC[8]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[0]  ; 8.449             ;
+; SCOMP:inst|AC[6]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 8.321             ;
+; Incrementer:inst10|count[3]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 8.243             ;
+; SCOMP:inst|IR[6]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.226             ;
+; Incrementer:inst10|count[6]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 8.152             ;
+; SCOMP:inst|AC[5]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 8.138             ;
+; SCOMP:inst|AC[4]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[4] ; 8.137             ;
+; SCOMP:inst|IR[5]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.132             ;
+; SCOMP:inst|AC[0]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 8.129             ;
+; SCOMP:inst|IR[3]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.111             ;
+; Incrementer:inst10|count[4]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[4] ; 8.106             ;
+; Incrementer:inst10|count[1]                       ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 8.086             ;
+; Incrementer:inst10|count[5]                       ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 8.082             ;
+; Incrementer:inst10|count[8]                       ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[0]  ; 8.073             ;
+; SCOMP:inst|IR[2]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.061             ;
+; QuadratureDecoder:inst11|count[7]                 ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 8.024             ;
+; Incrementer:inst10|count[10]                      ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 8.022             ;
+; QuadratureDecoder:inst11|count[9]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 8.011             ;
+; SCOMP:inst|IR[1]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 7.992             ;
+; SCOMP:inst|IO_CYCLE                               ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; SCOMP:inst|IR[10]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; SCOMP:inst|IR[9]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; SCOMP:inst|IR[8]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; SCOMP:inst|IR[7]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; SCOMP:inst|IR[4]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.963             ;
+; QuadratureDecoder:inst11|count[1]                 ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 7.954             ;
+; Incrementer:inst10|count[0]                       ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 7.949             ;
+; SCOMP:inst|AC[11]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[3]  ; 7.941             ;
+; SCOMP:inst|AC[12]                                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[4]  ; 7.898             ;
+; QuadratureDecoder:inst11|count[3]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 7.844             ;
+; QuadratureDecoder:inst11|count[6]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 7.842             ;
+; QuadratureDecoder:inst11|count[2]                 ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 7.824             ;
+; SCOMP:inst|AC[15]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[3]  ; 7.793             ;
+; SCOMP:inst|AC[1]                                  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 7.727             ;
+; SCOMP:inst|AC[13]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[1]  ; 7.686             ;
+; QuadratureDecoder:inst11|count[0]                 ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 7.677             ;
+; Incrementer:inst10|count[11]                      ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[3]  ; 7.599             ;
+; SCOMP:inst|AC[3]                                  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 7.566             ;
+; Incrementer:inst10|count[12]                      ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[4]  ; 7.562             ;
+; QuadratureDecoder:inst11|count[10]                ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 7.556             ;
+; QuadratureDecoder:inst11|count[8]                 ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[0]  ; 7.527             ;
+; QuadratureDecoder:inst11|count[5]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 7.448             ;
+; QuadratureDecoder:inst11|count[4]                 ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[4] ; 7.421             ;
+; Incrementer:inst10|count[15]                      ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[3]  ; 7.319             ;
+; Incrementer:inst10|count[13]                      ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[1]  ; 7.181             ;
+; QuadratureDecoder:inst11|count[15]                ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[3]  ; 7.148             ;
+; QuadratureDecoder:inst11|count[12]                ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[4]  ; 7.124             ;
+; SCOMP:inst|AC[14]                                 ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[2]  ; 7.083             ;
+; QuadratureDecoder:inst11|count[11]                ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[3]  ; 6.966             ;
+; QuadratureDecoder:inst11|count[13]                ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[1]  ; 6.899             ;
+; Incrementer:inst10|count[14]                      ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[2]  ; 6.576             ;
+; QuadratureDecoder:inst11|count[14]                ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[2]  ; 6.294             ;
+; DIG_IN:inst7|B_DI[6]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 5.988             ;
+; DIG_IN:inst7|B_DI[2]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 5.806             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[6]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 5.749             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[1]  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 5.734             ;
+; DIG_IN:inst7|B_DI[5]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 5.631             ;
+; DIG_IN:inst7|B_DI[1]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 5.619             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[5]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 5.618             ;
+; DIG_IN:inst7|B_DI[9]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 5.519             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[4]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[4] ; 5.489             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[0]  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 5.466             ;
+; DIG_IN:inst7|B_DI[4]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[4] ; 5.450             ;
+; DIG_IN:inst7|B_DI[7]                              ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 5.443             ;
+; DIG_IN:inst7|B_DI[3]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 5.231             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]  ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 5.189             ;
+; DIG_IN:inst7|B_DI[8]                              ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[0]  ; 5.038             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[8]  ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[0]  ; 4.980             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[10] ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 4.831             ;
+; TIMER:inst4|COUNT[2]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 4.808             ;
+; TIMER:inst4|COUNT[3]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 4.791             ;
+; TIMER:inst4|COUNT[9]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 4.676             ;
+; TIMER:inst4|COUNT[7]                              ; HEX_DISP_6:inst9|HEX_DISP:inst6|latched_hex[3]  ; 4.393             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[2]  ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[2]  ; 4.392             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[9]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[1]  ; 4.158             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[3]  ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[3] ; 4.024             ;
+; DIG_IN:inst7|B_DI[0]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 4.019             ;
+; TIMER:inst4|COUNT[10]                             ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[2]  ; 3.959             ;
+; TIMER:inst4|COUNT[12]                             ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[4]  ; 3.796             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|running      ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 3.755             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|go           ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 3.755             ;
+; TIMER:inst4|COUNT[0]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[0]  ; 3.755             ;
+; TIMER:inst4|COUNT[15]                             ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[3]  ; 3.667             ;
+; TIMER:inst4|COUNT[6]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[6] ; 3.665             ;
+; TIMER:inst4|COUNT[11]                             ; HEX_DISP_6:inst9|HEX_DISP:inst3|latched_hex[3]  ; 3.595             ;
+; TIMER:inst4|COUNT[13]                             ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[1]  ; 3.549             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[12] ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|cmd_in[4]  ; 3.483             ;
+; TIMER:inst4|COUNT[1]                              ; HEX_DISP_6:inst9|HEX_DISP:inst1|latched_hex[1]  ; 3.470             ;
+; TIMER:inst4|COUNT[5]                              ; I2C_INTERFACE:inst13|i2c_ctrl:inst14|addr_in[5] ; 3.468             ;
+; TIMER:inst4|COUNT[14]                             ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[2]  ; 3.397             ;
+; I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[15] ; HEX_DISP_6:inst9|HEX_DISP:inst4|latched_hex[3]  ; 3.381             ;
++---------------------------------------------------+-------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (119006): Selected device 10M50DAF484C7G for design "SCOMP"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|pll1" as MAX 10 PLL type File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v Line: 51
-    Info (15099): Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] port File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v Line: 51
+Info (15535): Implemented PLL "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|pll1" as MAX 10 PLL type File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v Line: 51
+    Info (15099): Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] port File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v Line: 51
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -2131,55 +2139,55 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_4) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v Line: 93
+Info (176353): Automatically promoted node PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_4) File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v Line: 93
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G8
-Info (176353): Automatically promoted node I2C_INTERFACE:inst13|i2c_master:inst|data_clk  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 53
+Info (176353): Automatically promoted node I2C_INTERFACE:inst13|i2c_master:inst|data_clk  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 53
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node clk_div:inst5|clock_100kHz  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 11
+Info (176353): Automatically promoted node clk_div:inst5|clock_100kHz  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 11
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node clk_div:inst5|clock_10Hz  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 15
+Info (176353): Automatically promoted node clk_div:inst5|clock_10Hz  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 16
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node I2C_INTERFACE:inst13|inst13 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node IO_DECODER:inst3|HEX0_EN  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 18
+Info (176353): Automatically promoted node IO_DECODER:inst3|HEX0_EN  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node I2C_INTERFACE:inst13|inst12 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node IO_DECODER:inst3|LED_EN  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 16
+Info (176353): Automatically promoted node IO_DECODER:inst3|LED_EN  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 16
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node IO_DECODER:inst3|SWITCH_EN  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 15
+Info (176353): Automatically promoted node IO_DECODER:inst3|SWITCH_EN  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 15
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[0]~18
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[1]~21
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[3]~31
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[4]~36
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[6]~46
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[10]~65
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[11]~69
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[12]~74
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[13]~77
-        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[14]~81
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[0]~24
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[1]~27
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[2]~32
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[3]~36
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[4]~40
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[5]~45
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[6]~50
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[8]~59
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[9]~64
+        Info (176357): Destination node I2C_INTERFACE:inst13|inst1[10]~67
         Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node IO_DECODER:inst3|HEX1_EN  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 19
+Info (176353): Automatically promoted node clk_div:inst5|clock_25kHz  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node clk_div:inst5|clock_10kHz  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 12
+Info (176353): Automatically promoted node IO_DECODER:inst3|HEX1_EN  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node IO_DECODER:inst3|PWM_EN  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 26
+Info (176353): Automatically promoted node IO_DECODER:inst3|PWM_EN  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 26
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0  File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd Line: 84
+Info (176353): Automatically promoted node I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]~0  File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd Line: 84
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 56
-        Info (176357): Destination node SCOMP:inst|IO_CYCLE File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 21
-        Info (176357): Destination node SCOMP:inst|AC[0] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[1] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[2] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[3] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[4] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[5] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[6] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
-        Info (176357): Destination node SCOMP:inst|AC[7] File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|IO_WRITE_int File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 56
+        Info (176357): Destination node SCOMP:inst|IO_CYCLE File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 21
+        Info (176357): Destination node SCOMP:inst|AC[0] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[1] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[2] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[3] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[4] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[5] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[6] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
+        Info (176357): Destination node SCOMP:inst|AC[7] File: C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 130
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2191,25 +2199,25 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "DP[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DP[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "DP[5]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:09
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X45_Y33 to location X55_Y43
+    Info (170196): Router estimated peak interconnect usage is 19% of the available device resources in the region that extends from location X56_Y33 to location X66_Y43
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:50
-Info (11888): Total time spent on timing analysis during the Fitter is 4.52 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:17
+Info (11888): Total time spent on timing analysis during the Fitter is 1.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:07
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin GSENSOR_SDI uses I/O standard 3.3-V LVTTL at V11
@@ -2229,17 +2237,17 @@ Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13
     Info (169178): Pin ENCODER_H1 uses I/O standard 3.3-V LVTTL at Y10
     Info (169178): Pin ENCODER_H2 uses I/O standard 3.3-V LVTTL at AB9
-Info (144001): Generated suppressed messages file C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/output_files/SCOMP.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/output_files/SCOMP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 5655 megabytes
-    Info: Processing ended: Tue Apr 06 22:27:04 2021
-    Info: Elapsed time: 00:01:29
-    Info: Total CPU time (on all processors): 00:01:48
+    Info: Peak virtual memory: 5832 megabytes
+    Info: Processing ended: Sun Apr 11 14:59:53 2021
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/output_files/SCOMP.fit.smsg.
+The suppressed messages can be found in C:/Users/Hari/Documents/GitHub/MotorDecoderInterface/output_files/SCOMP.fit.smsg.
 
 

@@ -9,6 +9,7 @@ ENTITY clk_div IS
 	(
 		clock_10MHz      : IN  STD_LOGIC;
 		clock_100kHz     : OUT STD_LOGIC;
+		clock_25kHz		  : OUT STD_LOGIC;
 		clock_10kHz      : OUT STD_LOGIC;
 		clock_100Hz      : OUT STD_LOGIC;
 		clock_32Hz       : OUT STD_LOGIC;
@@ -24,13 +25,15 @@ ARCHITECTURE a OF clk_div IS
 	CONSTANT half_freq   : INTEGER := clk_freq/2;
 	
 	SIGNAL count_100kHz     : INTEGER RANGE 0 TO half_freq/100000; 
+	SIGNAL count_25kHz		: INTEGER RANGE 0 TO half_freq/25000;
 	SIGNAL count_10kHz      : INTEGER RANGE 0 TO half_freq/10000; 
 	SIGNAL count_100Hz      : INTEGER RANGE 0 TO half_freq/100;
 	SIGNAL count_32Hz       : INTEGER RANGE 0 TO half_freq/32; 
 	SIGNAL count_10Hz       : INTEGER RANGE 0 TO half_freq/10; 
 	SIGNAL count_4Hz        : INTEGER RANGE 0 TO half_freq/4; 
 	
-	SIGNAL clock_100kHz_int : STD_LOGIC; 
+	SIGNAL clock_100kHz_int : STD_LOGIC;
+	SIGNAL clock_25kHz_int  : STD_LOGIC;
 	SIGNAL clock_10kHz_int  : STD_LOGIC; 
 	SIGNAL clock_100Hz_int  : STD_LOGIC;
 	SIGNAL clock_32Hz_int   : STD_LOGIC; 
@@ -43,6 +46,7 @@ BEGIN
 	WAIT UNTIL RISING_EDGE(clock_10MHz);
 	
 		clock_100kHz <= clock_100kHz_int;
+		clock_25kHz <= clock_25kHZ_int;
 		clock_10kHz <= clock_10kHz_int;
 		clock_100Hz <= clock_100Hz_int;
 		clock_32Hz  <= clock_32Hz_int;
@@ -56,6 +60,15 @@ BEGIN
 			count_100kHz <= 0;
 			clock_100kHz_int <= NOT(clock_100kHz_int);
 		END IF;	
+		
+	--
+		IF count_25kHz < (half_freq/25000-1) THEN
+			count_25kHz <= count_25kHz + 1;
+		ELSE
+			count_25kHz <= 0;
+			clock_25kHz_int <= NOT(clock_25kHz_int);
+		END IF;	
+
 	--
 		IF count_10kHz < (half_freq/10000-1) THEN
 			count_10kHz <= count_10kHz + 1;
