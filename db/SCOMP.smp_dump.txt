@@ -1,4 +1,18 @@
 
+State Machine - |SCOMP_System|Display:inst15|state
+Name state.ten state.nine state.eight state.seven state.six state.five state.four state.three state.two state.one state.zero 
+state.zero 0 0 0 0 0 0 0 0 0 0 0 
+state.one 0 0 0 0 0 0 0 0 0 1 1 
+state.two 0 0 0 0 0 0 0 0 1 0 1 
+state.three 0 0 0 0 0 0 0 1 0 0 1 
+state.four 0 0 0 0 0 0 1 0 0 0 1 
+state.five 0 0 0 0 0 1 0 0 0 0 1 
+state.six 0 0 0 0 1 0 0 0 0 0 1 
+state.seven 0 0 0 1 0 0 0 0 0 0 1 
+state.eight 0 0 1 0 0 0 0 0 0 0 1 
+state.nine 0 1 0 0 0 0 0 0 0 0 1 
+state.ten 1 0 0 0 0 0 0 0 0 0 1 
+
 State Machine - |SCOMP_System|QuadratureDecoder:inst11|state
 Name state.AB_01 state.AB_11 state.AB_10 state.AB_00 state.init 
 state.init 0 0 0 0 0 

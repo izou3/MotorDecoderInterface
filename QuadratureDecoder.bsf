@@ -68,10 +68,17 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(port
 		(pt 216 32)
+		(output)
+		(text "Counter[15..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "Counter[15..0]" (rect 140 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
 		(bidir)
 		(text "IO_DATA[15..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "IO_DATA[15..0]" (rect 127 27 195 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
+		(text "IO_DATA[15..0]" (rect 127 43 195 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 128)(line_width 1))

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Tue Apr 06 22:25:33 2021
+Sun Apr 11 06:14:11 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -15,30 +15,31 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |SCOMP_System|QuadratureDecoder:inst11|state
- 11. State Machine - |SCOMP_System|Incrementer:inst10|state
- 12. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|state
- 13. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|state
- 14. State Machine - |SCOMP_System|SCOMP:inst|state
- 15. Registers Removed During Synthesis
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated
- 20. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
- 23. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
- 24. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
- 25. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
- 26. Parameter Settings for User Entity Instance: I2C_INTERFACE:inst13|i2c_master:inst
- 27. Parameter Settings for User Entity Instance: Incrementer:inst10|LPM_BUSTRI:IO_BUS
- 28. Parameter Settings for User Entity Instance: QuadratureDecoder:inst11|LPM_BUSTRI:IO_BUS
- 29. altpll Parameter Settings by Entity Instance
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+ 10. State Machine - |SCOMP_System|Display:inst15|state
+ 11. State Machine - |SCOMP_System|QuadratureDecoder:inst11|state
+ 12. State Machine - |SCOMP_System|Incrementer:inst10|state
+ 13. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|state
+ 14. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|state
+ 15. State Machine - |SCOMP_System|SCOMP:inst|state
+ 16. Registers Removed During Synthesis
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated
+ 21. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
+ 22. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
+ 24. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
+ 25. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
+ 26. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
+ 27. Parameter Settings for User Entity Instance: I2C_INTERFACE:inst13|i2c_master:inst
+ 28. Parameter Settings for User Entity Instance: Incrementer:inst10|LPM_BUSTRI:IO_BUS
+ 29. Parameter Settings for User Entity Instance: QuadratureDecoder:inst11|LPM_BUSTRI:IO_BUS
+ 30. altpll Parameter Settings by Entity Instance
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -65,15 +66,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 06 22:25:33 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 11 06:14:11 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,072                                       ;
-;     Total combinational functions  ; 941                                         ;
-;     Dedicated logic registers      ; 456                                         ;
-; Total registers                    ; 456                                         ;
+; Total logic elements               ; 1,189                                       ;
+;     Total combinational functions  ; 1,054                                       ;
+;     Dedicated logic registers      ; 481                                         ;
+; Total registers                    ; 481                                         ;
 ; Total pins                         ; 75                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,768                                      ;
@@ -176,61 +177,65 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processors 7-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
-; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/I2C_INTERFACE.bdf      ;         ;
-; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd         ;         ;
-; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd           ;         ;
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd           ;         ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd            ;         ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd             ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd            ;         ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd              ;         ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd         ;         ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd              ;         ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP_System.bdf       ;         ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd           ;         ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP_6.bdf         ;         ;
-; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd        ;         ;
-; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd  ;         ;
-; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd       ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf                  ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/aglobal191.inc              ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_pll.inc             ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratixii_pll.inc           ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/cycloneii_pll.inc           ;         ;
-; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v   ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf              ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_ram_block.inc       ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_mux.inc                 ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_decode.inc              ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/a_rdenreg.inc               ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altrom.inc                  ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altram.inc                  ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altdpram.inc                ;         ;
-; db/altsyncram_efs3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/altsyncram_efs3.tdf ;         ;
-; velocitycontrol.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/velocitycontrol.mif    ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf             ;         ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/lpm_clshift_fuc.tdf ;         ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_bustri.tdf              ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
+; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/I2C_INTERFACE.bdf      ;         ;
+; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd         ;         ;
+; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd           ;         ;
+; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd           ;         ;
+; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd            ;         ;
+; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd             ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/clk_div.vhd            ;         ;
+; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/TIMER.vhd              ;         ;
+; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd         ;         ;
+; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd              ;         ;
+; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP_System.bdf       ;         ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd           ;         ;
+; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/HEX_DISP_6.bdf         ;         ;
+; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd        ;         ;
+; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd  ;         ;
+; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd       ;         ;
+; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/display.vhd            ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf                     ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                 ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc                ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc              ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc              ;         ;
+; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                 ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                    ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                 ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                  ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                     ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                     ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
+; db/altsyncram_efs3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/altsyncram_efs3.tdf ;         ;
+; velocitycontrol.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/velocitycontrol.mif    ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf                ;         ;
+; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/lpm_clshift_fuc.tdf ;         ;
+; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_bustri.tdf                 ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -238,20 +243,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,072                                                                                  ;
+; Estimated Total logic elements              ; 1,189                                                                                  ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 941                                                                                    ;
+; Total combinational functions               ; 1054                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 507                                                                                    ;
-;     -- 3 input functions                    ; 294                                                                                    ;
+;     -- 4 input functions                    ; 586                                                                                    ;
+;     -- 3 input functions                    ; 328                                                                                    ;
 ;     -- <=2 input functions                  ; 140                                                                                    ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 837                                                                                    ;
+;     -- normal mode                          ; 950                                                                                    ;
 ;     -- arithmetic mode                      ; 104                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 456                                                                                    ;
-;     -- Dedicated logic registers            ; 456                                                                                    ;
+; Total registers                             ; 481                                                                                    ;
+;     -- Dedicated logic registers            ; 481                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 75                                                                                     ;
@@ -263,9 +268,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 285                                                                                    ;
-; Total fan-out                               ; 4917                                                                                   ;
-; Average fan-out                             ; 3.14                                                                                   ;
+; Maximum fan-out                             ; 327                                                                                    ;
+; Total fan-out                               ; 5400                                                                                   ;
+; Average fan-out                             ; 3.17                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -274,9 +279,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
-; |SCOMP_System                             ; 941 (0)             ; 456 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
+; |SCOMP_System                             ; 1054 (0)            ; 481 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
 ;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_IN:inst7                                                              ; DIG_IN            ; work         ;
-;    |DIG_OUT:inst6|                        ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                             ; DIG_OUT           ; work         ;
+;    |Display:inst15|                       ; 102 (102)           ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Display:inst15                                                            ; Display           ; work         ;
 ;    |HEX_DISP_6:inst9|                     ; 42 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6        ; work         ;
 ;       |HEX_DISP:inst1|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst2|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP          ; work         ;
@@ -284,22 +289,23 @@ https://fpgasoftware.intel.com/eula.
 ;       |HEX_DISP:inst4|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst5|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst6|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP          ; work         ;
-;    |I2C_INTERFACE:inst13|                 ; 249 (90)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
+;    |I2C_INTERFACE:inst13|                 ; 255 (96)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
 ;       |i2c_ctrl:inst14|                   ; 58 (58)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl          ; work         ;
 ;       |i2c_master:inst|                   ; 101 (101)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                      ; i2c_master        ; work         ;
-;    |IO_DECODER:inst3|                     ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER        ; work         ;
+;    |IO_DECODER:inst3|                     ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER        ; work         ;
 ;    |Incrementer:inst10|                   ; 18 (18)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Incrementer:inst10                                                        ; Incrementer       ; work         ;
 ;    |PLL_main:inst1|                       ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1                                                            ; PLL_main          ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                    ; altpll            ; work         ;
 ;          |PLL_main_altpll:auto_generated| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated     ; PLL_main_altpll   ; work         ;
 ;    |PWM_GEN:inst14|                       ; 10 (10)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PWM_GEN:inst14                                                            ; PWM_GEN           ; work         ;
-;    |QuadratureDecoder:inst11|             ; 55 (55)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
-;    |SCOMP:inst|                           ; 482 (406)           ; 177 (177)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
+;    |QuadratureDecoder:inst11|             ; 55 (55)             ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
+;    |SCOMP:inst|                           ; 483 (406)           ; 177 (177)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
 ;          |altsyncram_efs3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated ; altsyncram_efs3   ; work         ;
-;       |lpm_clshift:shifter|               ; 76 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 76 (76)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
-;    |TIMER:inst4|                          ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
+;       |lpm_clshift:shifter|               ; 77 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 77 (77)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
+;    |TIMER:inst4|                          ; 20 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
+;       |lpm_bustri:IO_BUS|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4|lpm_bustri:IO_BUS                                             ; lpm_bustri        ; work         ;
 ;    |clk_div:inst5|                        ; 49 (49)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div           ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -321,6 +327,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
 ; Altera ; ALTPLL       ; 19.1    ; N/A          ; N/A          ; |SCOMP_System|PLL_main:inst1 ; PLL_main.vhd    ;
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SCOMP_System|Display:inst15|state                                                                                                        ;
++-------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
+; Name        ; state.ten ; state.nine ; state.eight ; state.seven ; state.six ; state.five ; state.four ; state.three ; state.two ; state.one ; state.zero ;
++-------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
+; state.zero  ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 0          ;
+; state.one   ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 1         ; 1          ;
+; state.two   ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 1         ; 0         ; 1          ;
+; state.three ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 1           ; 0         ; 0         ; 1          ;
+; state.four  ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 1          ; 0           ; 0         ; 0         ; 1          ;
+; state.five  ; 0         ; 0          ; 0           ; 0           ; 0         ; 1          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.six   ; 0         ; 0          ; 0           ; 0           ; 1         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.seven ; 0         ; 0          ; 0           ; 1           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.eight ; 0         ; 0          ; 1           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.nine  ; 0         ; 1          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.ten   ; 1         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
++-------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
 
 
 Encoding Type:  One-Hot
@@ -428,12 +454,13 @@ Encoding Type:  One-Hot
 +-----------------------------------------------+-------------------------------------------+
 ; I2C_INTERFACE:inst13|i2c_master:inst|scl_clk  ; Stuck at GND due to stuck port data_in    ;
 ; DIG_IN:inst7|B_DI[10..15]                     ; Stuck at GND due to stuck port data_in    ;
+; QuadratureDecoder:inst11|Counter[0,1]         ; Lost fanout                               ;
 ; I2C_INTERFACE:inst13|i2c_master:inst|count[2] ; Stuck at GND due to stuck port data_in    ;
 ; SCOMP:inst|state.ex_nop                       ; Lost fanout                               ;
 ; Incrementer:inst10|state.BTN_low              ; Lost fanout                               ;
 ; QuadratureDecoder:inst11|state.init           ; Merged with Incrementer:inst10|state.Init ;
 ; SCOMP:inst|state.init                         ; Merged with Incrementer:inst10|state.Init ;
-; Total Number of Removed Registers = 12        ;                                           ;
+; Total Number of Removed Registers = 14        ;                                           ;
 +-----------------------------------------------+-------------------------------------------+
 
 
@@ -442,12 +469,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 456   ;
+; Total registers                              ; 481   ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 181   ;
+; Number of registers using Asynchronous Clear ; 182   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 253   ;
+; Number of registers using Clock Enable       ; 267   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -470,19 +497,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[8][2]                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|data_tx[4]   ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[6]   ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[1][0]                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[4]   ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|Counter[5]               ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[7]   ;
 ; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[4]                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[2]   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[12] ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|Incrementer:inst10|count[15]                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[5]  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|count[9]                 ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[2]                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[0]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[10] ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|Incrementer:inst10|count[1]                       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[4]  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|count[15]                ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[12]                                 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|count        ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|Incrementer:inst10|Selector1                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector0                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector3                ;
 ; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |SCOMP_System|SCOMP:inst|Add1                                   ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector2                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
@@ -1050,28 +1078,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 75                          ;
-; cycloneiii_ff         ; 456                         ;
-;     CLR               ; 138                         ;
-;     ENA               ; 210                         ;
+; cycloneiii_ff         ; 481                         ;
+;     CLR               ; 139                         ;
+;     ENA               ; 224                         ;
 ;     ENA CLR           ; 43                          ;
 ;     SCLR              ; 34                          ;
-;     plain             ; 31                          ;
+;     plain             ; 41                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 948                         ;
+; cycloneiii_lcell_comb ; 1061                        ;
 ;     arith             ; 104                         ;
 ;         2 data inputs ; 72                          ;
 ;         3 data inputs ; 32                          ;
-;     normal            ; 844                         ;
+;     normal            ; 957                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 18                          ;
 ;         2 data inputs ; 56                          ;
-;         3 data inputs ; 262                         ;
-;         4 data inputs ; 507                         ;
+;         3 data inputs ; 296                         ;
+;         4 data inputs ; 586                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 4.05                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 3.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1080,7 +1108,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1090,62 +1118,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Apr 06 22:24:58 2021
+    Info: Processing started: Sun Apr 11 06:14:02 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_interface.bdf
     Info (12023): Found entity 1: I2C_INTERFACE
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 49
-    Info (12023): Found entity 1: i2c_master File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 31
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 49
+    Info (12023): Found entity 1: i2c_master File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_ctrl.vhd
-    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd Line: 32
-    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_ctrl.vhd Line: 11
+    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd Line: 32
+    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_ctrl.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
-    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd Line: 17
-    Info (12023): Found entity 1: HEX_DISP File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/HEX_DISP.vhd Line: 9
+    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd Line: 17
+    Info (12023): Found entity 1: HEX_DISP File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/HEX_DISP.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
-    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd Line: 26
-    Info (12023): Found entity 1: DIG_OUT File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_OUT.vhd Line: 16
+    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd Line: 26
+    Info (12023): Found entity 1: DIG_OUT File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_OUT.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
-    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd Line: 18
-    Info (12023): Found entity 1: DIG_IN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/DIG_IN.vhd Line: 10
+    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd Line: 18
+    Info (12023): Found entity 1: DIG_IN File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/DIG_IN.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 21
-    Info (12023): Found entity 1: clk_div File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/clk_div.vhd Line: 6
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 21
+    Info (12023): Found entity 1: clk_div File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/clk_div.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: TIMER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 27
-    Info (12023): Found entity 1: TIMER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 17
+    Info (12022): Found design unit 1: TIMER-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 27
+    Info (12023): Found entity 1: TIMER File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 31
-    Info (12023): Found entity 1: IO_DECODER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/IO_DECODER.vhd Line: 9
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 31
+    Info (12023): Found entity 1: IO_DECODER File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
-    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 33
-    Info (12023): Found entity 1: SCOMP File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 16
+    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 33
+    Info (12023): Found entity 1: SCOMP File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file scomp_system.bdf
     Info (12023): Found entity 1: SCOMP_System
 Info (12021): Found 2 design units, including 1 entities, in source file pll_main.vhd
-    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 54
-    Info (12023): Found entity 1: PLL_main File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 43
+    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 54
+    Info (12023): Found entity 1: PLL_main File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file hex_disp_6.bdf
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 2 design units, including 1 entities, in source file incrementer.vhd
-    Info (12022): Found design unit 1: Incrementer-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd Line: 27
-    Info (12023): Found entity 1: Incrementer File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/Incrementer.vhd Line: 13
+    Info (12022): Found design unit 1: Incrementer-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd Line: 27
+    Info (12023): Found entity 1: Incrementer File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/Incrementer.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file quadraturedecoder.vhd
-    Info (12022): Found design unit 1: QuadratureDecoder-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd Line: 28
-    Info (12023): Found entity 1: QuadratureDecoder File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/QuadratureDecoder.vhd Line: 13
+    Info (12022): Found design unit 1: QuadratureDecoder-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd Line: 29
+    Info (12023): Found entity 1: QuadratureDecoder File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/QuadratureDecoder.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file pwmgenerator.vhd
-    Info (12022): Found design unit 1: PWM_GEN-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd Line: 24
-    Info (12023): Found entity 1: PWM_GEN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PWMGenerator.vhd Line: 15
+    Info (12022): Found design unit 1: PWM_GEN-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd Line: 24
+    Info (12023): Found entity 1: PWM_GEN File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PWMGenerator.vhd Line: 15
 Warning (12019): Can't analyze file -- file output_files/PositionControl.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: Display-a File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/display.vhd Line: 31
+    Info (12023): Found entity 1: Display File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/display.vhd Line: 10
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "PWM_GEN" for hierarchy "PWM_GEN:inst14"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
-Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
-Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
+Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/PLL_main.vhd Line: 141
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1202,13 +1233,13 @@ Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component"
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_main_altpll.v
-    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/pll_main_altpll.v Line: 31
-Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/pll_main_altpll.v Line: 31
+Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "IO_DECODER" for hierarchy "IO_DECODER:inst3"
 Info (12128): Elaborating entity "SCOMP" for hierarchy "SCOMP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
-Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
+Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1260,27 +1291,27 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_efs3.tdf
-    Info (12023): Found entity 1: altsyncram_efs3 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/altsyncram_efs3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_efs3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 88
+    Info (12023): Found entity 1: altsyncram_efs3 File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/altsyncram_efs3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_efs3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_efs3:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_WIDTHDIST" = "4"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "arithmetic"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_fuc.tdf
-    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/db/lpm_clshift_fuc.tdf Line: 23
-Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
-Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/SCOMP.vhd Line: 115
+    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/db/lpm_clshift_fuc.tdf Line: 23
+Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
+Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/SCOMP.vhd Line: 115
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_TYPE" = "LPM_BUSTRI"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
-Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/TIMER.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/TIMER.vhd Line: 59
 Info (12128): Elaborating entity "DIG_IN" for hierarchy "DIG_IN:inst7"
 Info (12128): Elaborating entity "I2C_INTERFACE" for hierarchy "I2C_INTERFACE:inst13"
 Info (12128): Elaborating entity "i2c_master" for hierarchy "I2C_INTERFACE:inst13|i2c_master:inst"
@@ -1289,6 +1320,7 @@ Info (12128): Elaborating entity "Incrementer" for hierarchy "Incrementer:inst10
 Info (12128): Elaborating entity "QuadratureDecoder" for hierarchy "QuadratureDecoder:inst11"
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
+Info (12128): Elaborating entity "Display" for hierarchy "Display:inst15"
 Info (12128): Elaborating entity "DIG_OUT" for hierarchy "DIG_OUT:inst6"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[0]" to the node "PWM_GEN:inst14|COMPARE[0]" into an OR gate
@@ -1307,26 +1339,26 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[14]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[15]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15]" into an OR gate
-Info (13000): Registers with preset signals will power-up high File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/i2c_master.vhd Line: 57
+Info (13000): Registers with preset signals will power-up high File: C:/Users/JakeC/OneDrive/Documents/GitHub/MotorDecoderInterface/i2c_master.vhd Line: 57
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GSENSOR_CS_n" is stuck at VCC
     Warning (13410): Pin "GSENSOR_SDO" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1184 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1301 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 58 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1092 logic cells
+    Info (21061): Implemented 1209 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Tue Apr 06 22:25:33 2021
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:06
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Sun Apr 11 06:14:11 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 
