@@ -1,0 +1,113 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 8001;  -- 	CALL SetupArrays
+           001 : 0856;  -- 	LOAD Vel1
+           002 : 7855;  -- 	ISTORE VelArrIndex
+           003 : 085D;  -- 	LOAD Pos1
+           004 : 7854;  -- 	ISTORE PosArrIndex
+           005 : 0854;  -- 	LOAD PosArrIndex
+           006 : 1801;  -- 	ADD  1
+           007 : 1054;  -- 	STORE PosArrIndex
+           008 : 0855;  -- 	LOAD VelArrIndex
+           009 : 1801;  -- 	ADD  1
+           00A : 1055;  -- 	STORE VelArrIndex
+           00B : 0857;  -- 	LOAD Vel2
+           00C : 7855;  -- 	ISTORE VelArrIndex
+           00D : 085E;  -- 	LOAD Pos2
+           00E : 7854;  -- 	ISTORE PosArrIndex
+           00F : 0854;  -- 	LOAD PosArrIndex
+           010 : 1801;  -- 	ADD  1
+           011 : 1054;  -- 	STORE PosArrIndex
+           012 : 0855;  -- 	LOAD VelArrIndex
+           013 : 1801;  -- 	ADD  1
+           014 : 1055;  -- 	STORE VelArrIndex
+           015 : 0858;  -- 	LOAD Vel3
+           016 : 7855;  -- 	ISTORE VelArrIndex
+           017 : 085F;  -- 	LOAD Pos3
+           018 : 7854;  -- 	ISTORE PosArrIndex
+           019 : 0854;  -- 	LOAD PosArrIndex
+           01A : 1801;  -- 	ADD  1
+           01B : 1054;  -- 	STORE PosArrIndex
+           01C : 0855;  -- 	LOAD VelArrIndex
+           01D : 1801;  -- 	ADD  1
+           01E : 1055;  -- 	STORE VelArrIndex
+           01F : 0859;  -- 	LOAD Vel4
+           020 : 7855;  -- 	ISTORE VelArrIndex
+           021 : 0860;  -- 	LOAD Pos4
+           022 : 7854;  -- 	ISTORE PosArrIndex
+           023 : 0854;  -- 	LOAD PosArrIndex
+           024 : 1801;  -- 	ADD  1
+           025 : 1054;  -- 	STORE PosArrIndex
+           026 : 0855;  -- 	LOAD VelArrIndex
+           027 : 1801;  -- 	ADD  1
+           028 : 1055;  -- 	STORE VelArrIndex
+           029 : 085A;  -- 	LOAD Vel5
+           02A : 7855;  -- 	ISTORE VelArrIndex
+           02B : 0861;  -- 	LOAD Pos5
+           02C : 7854;  -- 	ISTORE PosArrIndex
+           02D : 0854;  -- 	LOAD PosArrIndex
+           02E : 1801;  -- 	ADD  1
+           02F : 1054;  -- 	STORE PosArrIndex
+           030 : 0855;  -- 	LOAD VelArrIndex
+           031 : 1801;  -- 	ADD  1
+           032 : 1055;  -- 	STORE VelArrIndex
+           033 : 085B;  -- 	LOAD Vel6
+           034 : 7855;  -- 	ISTORE VelArrIndex
+           035 : 0862;  -- 	LOAD Pos6
+           036 : 7854;  -- 	ISTORE PosArrIndex
+           037 : 0854;  -- 	LOAD PosArrIndex
+           038 : 1801;  -- 	ADD  1
+           039 : 1054;  -- 	STORE PosArrIndex
+           03A : 0855;  -- 	LOAD VelArrIndex
+           03B : 1801;  -- 	ADD  1
+           03C : 1055;  -- 	STORE VelArrIndex
+           03D : 085C;  -- 	LOAD Vel7
+           03E : 7855;  -- 	ISTORE VelArrIndex
+           03F : 0863;  -- 	LOAD Pos7
+           040 : 7854;  -- 	ISTORE PosArrIndex
+           041 : 0854;  -- 	LOAD PosArrIndex
+           042 : 1801;  -- 	ADD  1
+           043 : 1054;  -- 	STORE PosArrIndex
+           044 : 0855;  -- 	LOAD VelArrIndex
+           045 : 1801;  -- 	ADD  1
+           046 : 1055;  -- 	STORE VelArrIndex
+           047 : 0854;  -- 	LOAD PosArrIndex
+           048 : 1FFA;  -- 	ADD  -6
+           049 : 1054;  -- 	STORE PosArrIndex
+           04A : 0855;  -- 	LOAD VelArrIndex
+           04B : 1FFA;  -- 	ADD  -6
+           04C : 1055;  -- 	STORE VelArrIndex
+           04D : 8800;  -- 	RETURN
+           04E : 9802;  -- 	OUT	    Timer ; writing something to timer resets it to 0 
+           04F : 9002;  -- 	IN	    Timer		; time counts up to 32 in 1 sec or at 32 Hz 
+           050 : 6FE0;  -- 	ADDI	-32 		; waiting 1 of a second 
+           051 : 304F;  -- 	JNEG	WaitingLoop
+           052 : 8800;  -- 	RETURN
+           053 : 0000;  -- Zero:	DW 0
+           054 : 0100;  -- PosArrIndex:  DW &H0100
+           055 : 0200;  -- VelArrIndex:  DW &H0200
+           056 : 003C;  -- Vel1: DW 60
+           057 : 0032;  -- Vel2: DW 50
+           058 : 0002;  -- Vel3: DW 2
+           059 : 003C;  -- Vel4: DW 60
+           05A : 0032;  -- Vel5: DW 50
+           05B : 0002;  -- Vel6: DW 2
+           05C : 003C;  -- Vel7: DW 60
+           05D : 021C;  -- Pos1: DW 540
+           05E : 0438;  -- Pos2: DW 1080
+           05F : 021C;  -- Pos3: DW 540
+           060 : 0438;  -- Pos4: DW 1080
+           061 : 021C;  -- Pos5: DW 540
+           062 : 0438;  -- Pos6: DW 1080
+           063 : 021C;  -- Pos7: DW 540
+  END;
