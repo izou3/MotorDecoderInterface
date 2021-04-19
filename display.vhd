@@ -27,6 +27,7 @@ END Display;
 
 ARCHITECTURE a OF Display IS
 	SIGNAL Counter    : integer;
+	SIGNAL Tracker		: integer;
 	TYPE state_type is (zero, one, two, three, four, five, six, seven, eight, nine, ten);
 	SIGNAL state : state_type;
 	
@@ -57,7 +58,15 @@ ARCHITECTURE a OF Display IS
 				WHEN zero =>
 					IF Counter < 540 THEN
 						state <= zero;
+						IF Tracker = 1 THEN
+							LED0 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED0<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= one;
 						LED0<='1';
 					END IF;
@@ -66,9 +75,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 540 THEN
 						state <= zero;
 						LED0<='0';
+
 					ELSE IF Counter < 1080 THEN
 						state <= one;
+						IF Tracker = 1 THEN
+							LED1 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED1<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= two;
 						LED1<='1';
 					END IF;
@@ -78,9 +96,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 1080 THEN
 						state <= one;
 						LED1<='0';
+
 					ELSE IF Counter < 1620  THEN
 						state <= two;
+						IF Tracker = 1 THEN
+							LED2 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED2<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker<= 0;
 						state <= three;
 						LED2<='1';
 					END IF;
@@ -90,9 +117,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 1620 THEN
 						state <= two;
 						LED2<='0';
+
 					ELSE IF Counter < 2160  THEN
 						state <= three;
+						IF Tracker = 1 THEN
+							LED3 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED3<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= four;
 						LED3<='1';
 					END IF;
@@ -102,9 +138,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 2160 THEN
 						state <= three;
 						LED3<='0';
+
 					ELSE IF Counter < 2700  THEN
 						state <= four;
+						IF Tracker = 1 THEN
+							LED4 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED4<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= five;
 						LED4<='1';
 					END IF;
@@ -114,9 +159,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 2700 THEN
 						state <= four;
 						LED4<='0';
+
 					ELSE IF Counter < 3240  THEN
 						state <= five;
+						IF Tracker = 1 THEN
+							LED5 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED5<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= six;
 						LED5<='1';
 					END IF;
@@ -126,9 +180,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 3240 THEN
 						state <= five;
 						LED5<='0';
+
 					ELSE IF Counter < 3780  THEN
 						state <= six;
+						IF Tracker = 1 THEN
+							LED6 <= '1';
+							Tracker <= 0;
+						ELSE
+							LED6<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= seven;
 						LED6<='1';
 					END IF;
@@ -138,9 +201,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 3780 THEN
 						state <= six;
 						LED6<='0';
+
 					ELSE IF Counter < 4320  THEN
 						state <= seven;
+						IF Tracker = 1 THEN
+							LED7<= '1';
+							Tracker <= 0;
+						ELSE
+							LED7<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= eight;
 						LED7<='1';
 					END IF;
@@ -150,9 +222,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 4320 THEN
 						state <= seven;
 						LED7<='0';
+
 					ELSE IF Counter < 4860  THEN
 						state <= eight;
+						IF Tracker = 1 THEN
+							LED8<= '1';
+							Tracker <= 0;
+						ELSE
+							LED8<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= nine;
 						LED8<='1';
 					END IF;
@@ -162,9 +243,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 5400 THEN
 						state <= eight;
 						LED8<='0';
+
 					ELSE IF Counter < 5940  THEN
 						state <= nine;
+						IF Tracker = 1 THEN
+							LED9<= '1';
+							Tracker <= 0;
+						ELSE
+							LED9<='0';
+							Tracker <= 1;
+						END IF;
 					ELSE
+						Tracker <= 0;
 						state <= ten;
 						LED9<='1';
 					END IF;
@@ -175,6 +265,13 @@ ARCHITECTURE a OF Display IS
 						state <= nine;
 						LED9<='0';
 					ELSE
+						IF Tracker = 1 THEN
+							LED9<= '1';
+							Tracker <= 0;
+						ELSE
+							LED9<='0';
+							Tracker <= 1;
+						END IF;
 						state <= ten;
 					END IF;	
 				WHEN OTHERs =>
