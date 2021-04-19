@@ -1,0 +1,77 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : B801;  -- 	LOADI 1
+           001 : 9822;  -- 	OUT Direct 
+           002 : 083F;  -- 	LOAD  PWMSpeed
+           003 : 9821;  -- 	OUT   PWM 
+           004 : 8026;  -- 	CALL  ReadVelocity
+           005 : 083E;  -- 	LOAD  CurrVel
+           006 : 4000;  -- 	JZERO Start
+           007 : 203D;  -- 	SUB   DesiredVel
+           008 : 9804;  -- 	OUT   Hex0 
+           009 : 300D;  -- 	JNEG  IncPWM
+           00A : 3817;  -- 	JPOS  DecPWM 
+           00B : 4022;  -- 	JZERO Constant
+           00C : 2800;  -- 	JUMP Start 
+           00D : B802;  -- 	LOADI 2
+           00E : 9805;  -- 	OUT  Hex1 
+           00F : 083F;  -- 	LOAD  PWMSpeed
+           010 : 6801;  -- 	ADDI  1 
+           011 : 103F;  -- 	STORE PWMSpeed
+           012 : 9804;  -- 	OUT   Hex0
+           013 : 9821;  -- 	OUT   PWM 
+           014 : B801;  -- 	LOADI 1
+           015 : 9822;  -- 	OUT   Direct 
+           016 : 2821;  -- 	JUMP  Reloop
+           017 : B805;  -- 	LOADI 5
+           018 : 9805;  -- 	OUT  Hex1 
+           019 : 083F;  -- 	LOAD PWMSpeed
+           01A : 6FFF;  -- 	ADDI -1 
+           01B : 103F;  -- 	STORE PWMSpeed
+           01C : 9804;  -- 	OUT   Hex0
+           01D : 9821;  -- 	OUT   PWM 
+           01E : B801;  -- 	LOADI 1
+           01F : 9822;  -- 	OUT   Direct 
+           020 : 2821;  -- 	JUMP  Reloop
+           021 : 2800;  -- 	JUMP Start 1
+           022 : 083F;  -- 	LOAD PWMSpeed
+           023 : 9804;  -- 	OUT  Hex0
+           024 : 9821;  -- 	OUT  PWM
+           025 : 2800;  -- 	JUMP Start 
+           026 : 802F;  -- 	CALL	Delay
+           027 : 90F1;  -- 	IN		Quad
+           028 : 203C;  -- 	SUB		OldPos
+           029 : 6005;  -- 	SHIFT	5	
+           02A : 9804;  -- 	OUT		Hex0
+           02B : 103E;  -- 	STORE	CurrVel
+           02C : 90F1;  -- 	IN 		Quad 
+           02D : 103C;  -- 	STORE	OldPos
+           02E : 8800;  -- 	RETURN
+           02F : 9802;  -- 	OUT	Timer ; writing something to timer resets it to 0 
+           030 : 9002;  -- 	IN	Timer		; time counts up to 10 in 1 sec or at 10 Hz 
+           031 : 6FFF;  -- 	ADDI	-1 		; waiting 1/32 of a second 
+           032 : 3030;  -- 	JNEG	WaitingLoop
+           033 : 8800;  -- 	RETURN
+           034 : 0000;  -- Zero:      DW 0
+           035 : FFFF;  -- NegOne:    DW -1
+           036 : 0001;  -- VelControlOn:    DW 1
+           037 : 0000;  -- PosControlOn:	 DW 0
+           038 : 000F;  -- VelControl:      DW &B01111
+           039 : 0019;  -- PosControlSpeed: DW &B11001
+           03A : 021C;  -- PosControl:      DW 540
+           03B : 0000;  -- Countprev:	 	 DW 0
+           03C : 0000;  -- OldPos: 		 DW 0 
+           03D : 010E;  -- DesiredVel: 	 DW 270 ; 360 = 1 rev in 1.5 seconds
+           03E : 0000;  -- CurrVel: 		 DW 0 
+           03F : 0014;  -- PWMSpeed: 	     DW 20
+  END;
