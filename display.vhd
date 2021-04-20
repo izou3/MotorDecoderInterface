@@ -49,7 +49,8 @@ ARCHITECTURE a OF Display IS
 			LED6 <= '0';
 			LED7 <= '0';
 			LED8 <= '0';
-			LED9 <= '0';	
+			LED9 <= '0';
+			Tracker <= 0;
 			
 		ELSIF RISING_EDGE(CLK) THEN
 
@@ -58,12 +59,15 @@ ARCHITECTURE a OF Display IS
 				WHEN zero =>
 					IF Counter < 540 THEN
 						state <= zero;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED0 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED0<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -76,14 +80,15 @@ ARCHITECTURE a OF Display IS
 						state <= zero;
 						LED0<='0';
 
-					ELSE IF Counter < 1080 THEN
-						state <= one;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED1 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED1<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -97,14 +102,15 @@ ARCHITECTURE a OF Display IS
 						state <= one;
 						LED1<='0';
 
-					ELSE IF Counter < 1620  THEN
-						state <= two;
-						IF Tracker = 1 THEN
-							LED2 <= '1';
-							Tracker <= 0;
-						ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
+							LED2<= '1';
+						ELSE IF Tracker < 10000 THEN
 							LED2<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker<= 0;
@@ -118,14 +124,15 @@ ARCHITECTURE a OF Display IS
 						state <= two;
 						LED2<='0';
 
-					ELSE IF Counter < 2160  THEN
-						state <= three;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED3 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED3<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -139,14 +146,15 @@ ARCHITECTURE a OF Display IS
 						state <= three;
 						LED3<='0';
 
-					ELSE IF Counter < 2700  THEN
-						state <= four;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED4 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED4<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -160,14 +168,15 @@ ARCHITECTURE a OF Display IS
 						state <= four;
 						LED4<='0';
 
-					ELSE IF Counter < 3240  THEN
-						state <= five;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED5 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED5<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -181,14 +190,15 @@ ARCHITECTURE a OF Display IS
 						state <= five;
 						LED5<='0';
 
-					ELSE IF Counter < 3780  THEN
-						state <= six;
-						IF Tracker = 1 THEN
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
 							LED6 <= '1';
-							Tracker <= 0;
-						ELSE
+						ELSE IF Tracker < 10000 THEN
 							LED6<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -202,14 +212,15 @@ ARCHITECTURE a OF Display IS
 						state <= six;
 						LED6<='0';
 
-					ELSE IF Counter < 4320  THEN
-						state <= seven;
-						IF Tracker = 1 THEN
-							LED7<= '1';
-							Tracker <= 0;
-						ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
+							LED7 <= '1';
+						ELSE IF Tracker < 10000 THEN
 							LED7<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -223,14 +234,15 @@ ARCHITECTURE a OF Display IS
 						state <= seven;
 						LED7<='0';
 
-					ELSE IF Counter < 4860  THEN
-						state <= eight;
-						IF Tracker = 1 THEN
-							LED8<= '1';
-							Tracker <= 0;
-						ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
+							LED8 <= '1';
+						ELSE IF Tracker < 10000 THEN
 							LED8<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -244,14 +256,15 @@ ARCHITECTURE a OF Display IS
 						state <= eight;
 						LED8<='0';
 
-					ELSE IF Counter < 5940  THEN
-						state <= nine;
-						IF Tracker = 1 THEN
-							LED9<= '1';
-							Tracker <= 0;
-						ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
+							LED9 <= '1';
+						ELSE IF Tracker < 10000 THEN
 							LED9<='0';
-							Tracker <= 1;
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
+							Tracker <= 0;
 						END IF;
 					ELSE
 						Tracker <= 0;
@@ -265,11 +278,14 @@ ARCHITECTURE a OF Display IS
 						state <= nine;
 						LED9<='0';
 					ELSE
-						IF Tracker = 1 THEN
-							LED9<= '1';
-							Tracker <= 0;
-						ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 5000 THEN
+							LED9 <= '0';
+						ELSE IF Tracker < 10000 THEN
 							LED9<='0';
+						END IF;
+						END IF;
+						IF Tracker > 10000 THEN
 							Tracker <= 1;
 						END IF;
 						state <= ten;
