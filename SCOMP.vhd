@@ -8,6 +8,7 @@ library lpm;
 
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
+use ieee.numeric_std.all; 
 use ieee.std_logic_unsigned.all;
 use altera_mf.altera_mf_components.all;
 use lpm.lpm_components.all;
@@ -63,7 +64,7 @@ begin
 		numwords_a => 2048,
 		widthad_a => 11,
 		width_a => 16,
-		init_file => "DirectionControl.mif",
+		init_file => "DirectionControl.mif", 
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
 		intended_device_family => "MAX 10",

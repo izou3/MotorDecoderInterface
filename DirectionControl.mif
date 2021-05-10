@@ -10,68 +10,206 @@ CONTENT
   BEGIN
     [000..7FF] : 0000;  -- Default to NOP
 
-           000 : B801;  -- 	LOADI 1
-           001 : 9822;  -- 	OUT Direct 
-           002 : 083F;  -- 	LOAD  PWMSpeed
-           003 : 9821;  -- 	OUT   PWM 
-           004 : 8026;  -- 	CALL  ReadVelocity
-           005 : 083E;  -- 	LOAD  CurrVel
-           006 : 4000;  -- 	JZERO Start
-           007 : 203D;  -- 	SUB   DesiredVel
-           008 : 9804;  -- 	OUT   Hex0 
-           009 : 300D;  -- 	JNEG  IncPWM
-           00A : 3817;  -- 	JPOS  DecPWM 
-           00B : 4022;  -- 	JZERO Constant
-           00C : 2800;  -- 	JUMP Start 
-           00D : B802;  -- 	LOADI 2
-           00E : 9805;  -- 	OUT  Hex1 
-           00F : 083F;  -- 	LOAD  PWMSpeed
-           010 : 6801;  -- 	ADDI  1 
-           011 : 103F;  -- 	STORE PWMSpeed
-           012 : 9804;  -- 	OUT   Hex0
-           013 : 9821;  -- 	OUT   PWM 
-           014 : B801;  -- 	LOADI 1
-           015 : 9822;  -- 	OUT   Direct 
-           016 : 2821;  -- 	JUMP  Reloop
-           017 : B805;  -- 	LOADI 5
-           018 : 9805;  -- 	OUT  Hex1 
-           019 : 083F;  -- 	LOAD PWMSpeed
-           01A : 6FFF;  -- 	ADDI -1 
-           01B : 103F;  -- 	STORE PWMSpeed
-           01C : 9804;  -- 	OUT   Hex0
-           01D : 9821;  -- 	OUT   PWM 
-           01E : B801;  -- 	LOADI 1
-           01F : 9822;  -- 	OUT   Direct 
-           020 : 2821;  -- 	JUMP  Reloop
-           021 : 2800;  -- 	JUMP Start 1
-           022 : 083F;  -- 	LOAD PWMSpeed
-           023 : 9804;  -- 	OUT  Hex0
-           024 : 9821;  -- 	OUT  PWM
-           025 : 2800;  -- 	JUMP Start 
-           026 : 802F;  -- 	CALL	Delay
-           027 : 90F1;  -- 	IN		Quad
-           028 : 203C;  -- 	SUB		OldPos
-           029 : 6005;  -- 	SHIFT	5	
-           02A : 9804;  -- 	OUT		Hex0
-           02B : 103E;  -- 	STORE	CurrVel
-           02C : 90F1;  -- 	IN 		Quad 
-           02D : 103C;  -- 	STORE	OldPos
-           02E : 8800;  -- 	RETURN
-           02F : 9802;  -- 	OUT	Timer ; writing something to timer resets it to 0 
-           030 : 9002;  -- 	IN	Timer		; time counts up to 10 in 1 sec or at 10 Hz 
-           031 : 6FFF;  -- 	ADDI	-1 		; waiting 1/32 of a second 
-           032 : 3030;  -- 	JNEG	WaitingLoop
-           033 : 8800;  -- 	RETURN
-           034 : 0000;  -- Zero:      DW 0
-           035 : FFFF;  -- NegOne:    DW -1
-           036 : 0001;  -- VelControlOn:    DW 1
-           037 : 0000;  -- PosControlOn:	 DW 0
-           038 : 000F;  -- VelControl:      DW &B01111
-           039 : 0019;  -- PosControlSpeed: DW &B11001
-           03A : 021C;  -- PosControl:      DW 540
-           03B : 0000;  -- Countprev:	 	 DW 0
-           03C : 0000;  -- OldPos: 		 DW 0 
-           03D : 010E;  -- DesiredVel: 	 DW 270 ; 360 = 1 rev in 1.5 seconds
-           03E : 0000;  -- CurrVel: 		 DW 0 
-           03F : 0014;  -- PWMSpeed: 	     DW 20
+           000 : 8046;  -- 	CALL SetupArrays
+           001 : 8093;  -- 	CALL Delay 
+           002 : B828;  -- 	LOADI 40 
+           003 : 10C5;  -- 	STORE PWMSpeed
+           004 : 9000;  -- 	IN Switches 
+           005 : 48C7;  -- 	AND Bit0
+           006 : 9805;  -- 	OUT Hex1
+           007 : 38A2;  -- 	JPOS But
+           008 : 2801;  -- 	JUMP StationIteration
+           009 : 90F1;  -- 	IN Quad 
+           00A : 48C6;  -- 	AND Only1
+           00B : 309D;  -- 	JNEG ErrorHandling
+           00C : 08C5;  -- 	LOAD  PWMSpeed
+           00D : 9821;  -- 	OUT   PWM 
+           00E : 70AF;  -- 	ILOAD PosArrIndex 
+           00F : 9822;  -- 	OUT   Direct
+           010 : 9804;  -- 	OUT Hex0 
+           011 : 70B0;  -- 	ILOAD VelArrIndex
+           012 : 10C3;  -- 	STORE  DesiredVel
+           013 : 8098;  -- 	CALL  Delay2 
+           014 : 8098;  -- 	CALL  Delay2 
+           015 : 8098;  -- 	CALL  Delay2 
+           016 : 8098;  -- 	CALL  Delay2 
+           017 : 9022;  -- 	IN    Direct
+           018 : 9805;  -- 	OUT   Hex1 
+           019 : 3801;  -- 	JPOS  StationIteration
+           01A : 803C;  -- 	CALL  ReadVelocity
+           01B : 08C4;  -- 	LOAD  CurrVel
+           01C : 9804;  -- 	OUT   Hex0 
+           01D : 4009;  -- 	JZERO VelStart
+           01E : 20C3;  -- 	SUB   DesiredVel
+           01F : 3023;  -- 	JNEG  IncPWM
+           020 : 382D;  -- 	JPOS  DecPWM 
+           021 : 4038;  -- 	JZERO Constant
+           022 : 2809;  -- 	JUMP  VelStart 
+           023 : B802;  -- 	LOADI 2
+           024 : 9805;  -- 	OUT   Hex1 
+           025 : 08C5;  -- 	LOAD  PWMSpeed
+           026 : 6801;  -- 	ADDI  1 
+           027 : 10C5;  -- 	STORE PWMSpeed
+           028 : 9804;  -- 	OUT   Hex0
+           029 : 9821;  -- 	OUT   PWM 
+           02A : B801;  -- 	LOADI 1
+           02B : 9822;  -- 	OUT   Direct 
+           02C : 2837;  -- 	JUMP  Reloop
+           02D : B805;  -- 	LOADI 5
+           02E : 9805;  -- 	OUT  Hex1 
+           02F : 08C5;  -- 	LOAD PWMSpeed
+           030 : 6FFF;  -- 	ADDI -1 
+           031 : 10C5;  -- 	STORE PWMSpeed
+           032 : 9804;  -- 	OUT   Hex0
+           033 : 9821;  -- 	OUT   PWM 
+           034 : B801;  -- 	LOADI 1
+           035 : 9822;  -- 	OUT   Direct 
+           036 : 2837;  -- 	JUMP  Reloop
+           037 : 2809;  -- 	JUMP VelStart 
+           038 : 08C5;  -- 	LOAD PWMSpeed
+           039 : 9804;  -- 	OUT  Hex0
+           03A : 9821;  -- 	OUT  PWM
+           03B : 2809;  -- 	JUMP VelStart 
+           03C : 8098;  -- 	CALL	Delay2
+           03D : 90F1;  -- 	IN		Quad
+           03E : 20C2;  -- 	SUB		OldPos
+           03F : 80A9;  -- 	CALL    Abs 
+           040 : 6005;  -- 	SHIFT	5	
+           041 : 9804;  -- 	OUT		Hex0
+           042 : 10C4;  -- 	STORE	CurrVel
+           043 : 90F1;  -- 	IN 		Quad 
+           044 : 10C2;  -- 	STORE	OldPos
+           045 : 8800;  -- 	RETURN
+           046 : 08B1;  -- 	LOAD Vel1
+           047 : 78B0;  -- 	ISTORE VelArrIndex
+           048 : 08B9;  -- 	LOAD Pos1
+           049 : 78AF;  -- 	ISTORE PosArrIndex
+           04A : 08AF;  -- 	LOAD PosArrIndex
+           04B : 6801;  -- 	ADDI  1
+           04C : 10AF;  -- 	STORE PosArrIndex
+           04D : 08B0;  -- 	LOAD VelArrIndex
+           04E : 6801;  -- 	ADDI  1
+           04F : 10B0;  -- 	STORE VelArrIndex
+           050 : 08B2;  -- 	LOAD Vel2
+           051 : 78B0;  -- 	ISTORE VelArrIndex
+           052 : 08BA;  -- 	LOAD Pos2
+           053 : 78AF;  -- 	ISTORE PosArrIndex
+           054 : 08AF;  -- 	LOAD PosArrIndex
+           055 : 6801;  -- 	ADDI  1
+           056 : 10AF;  -- 	STORE PosArrIndex
+           057 : 08B0;  -- 	LOAD VelArrIndex
+           058 : 6801;  -- 	ADDI  1
+           059 : 10B0;  -- 	STORE VelArrIndex
+           05A : 08B3;  -- 	LOAD Vel3
+           05B : 78B0;  -- 	ISTORE VelArrIndex
+           05C : 08BB;  -- 	LOAD Pos3
+           05D : 78AF;  -- 	ISTORE PosArrIndex
+           05E : 08AF;  -- 	LOAD PosArrIndex
+           05F : 6801;  -- 	ADDI  1
+           060 : 10AF;  -- 	STORE PosArrIndex
+           061 : 08B0;  -- 	LOAD VelArrIndex
+           062 : 6801;  -- 	ADDI  1
+           063 : 10B0;  -- 	STORE VelArrIndex
+           064 : 08B4;  -- 	LOAD Vel4
+           065 : 78B0;  -- 	ISTORE VelArrIndex
+           066 : 08BC;  -- 	LOAD Pos4
+           067 : 78AF;  -- 	ISTORE PosArrIndex
+           068 : 08AF;  -- 	LOAD PosArrIndex
+           069 : 6801;  -- 	ADDI  1
+           06A : 10AF;  -- 	STORE PosArrIndex
+           06B : 08B0;  -- 	LOAD VelArrIndex
+           06C : 6801;  -- 	ADDI  1
+           06D : 10B0;  -- 	STORE VelArrIndex
+           06E : 08B5;  -- 	LOAD Vel5
+           06F : 78B0;  -- 	ISTORE VelArrIndex
+           070 : 08BD;  -- 	LOAD Pos5
+           071 : 78AF;  -- 	ISTORE PosArrIndex
+           072 : 08AF;  -- 	LOAD PosArrIndex
+           073 : 6801;  -- 	ADDI  1
+           074 : 10AF;  -- 	STORE PosArrIndex
+           075 : 08B0;  -- 	LOAD VelArrIndex
+           076 : 6801;  -- 	ADDI  1
+           077 : 10B0;  -- 	STORE VelArrIndex
+           078 : 08B6;  -- 	LOAD Vel6
+           079 : 78B0;  -- 	ISTORE VelArrIndex
+           07A : 08BE;  -- 	LOAD Pos6
+           07B : 78AF;  -- 	ISTORE PosArrIndex
+           07C : 08AF;  -- 	LOAD PosArrIndex
+           07D : 6801;  -- 	ADDI  1
+           07E : 10AF;  -- 	STORE PosArrIndex
+           07F : 08B0;  -- 	LOAD VelArrIndex
+           080 : 6801;  -- 	ADDI  1
+           081 : 10B0;  -- 	STORE VelArrIndex
+           082 : 08B7;  -- 	LOAD Vel7
+           083 : 78B0;  -- 	ISTORE VelArrIndex
+           084 : 08BF;  -- 	LOAD Pos7
+           085 : 78AF;  -- 	ISTORE PosArrIndex
+           086 : 08AF;  -- 	LOAD PosArrIndex
+           087 : 6801;  -- 	ADDI  1
+           088 : 10AF;  -- 	STORE PosArrIndex
+           089 : 08B0;  -- 	LOAD VelArrIndex
+           08A : 6801;  -- 	ADDI  1
+           08B : 10B0;  -- 	STORE VelArrIndex
+           08C : 08AF;  -- 	LOAD PosArrIndex
+           08D : 6FF9;  -- 	ADDI  -7
+           08E : 10AF;  -- 	STORE PosArrIndex
+           08F : 08B0;  -- 	LOAD VelArrIndex
+           090 : 6FF9;  -- 	ADDI  -7
+           091 : 10B0;  -- 	STORE VelArrIndex
+           092 : 8800;  -- 	RETURN
+           093 : 9802;  -- 	OUT	    Timer ; writing something to timer resets it to 0 
+           094 : 9002;  -- 	IN	    Timer		; time counts up to 32 in 1 sec or at 32 Hz 
+           095 : 6FC0;  -- 	ADDI	-64 		; waiting 1/32 of a second 
+           096 : 3094;  -- 	JNEG	WaitingLoop
+           097 : 8800;  -- 	RETURN
+           098 : 9824;  -- 	OUT	Timer2 ; writing something to timer resets it to 0 
+           099 : 9024;  -- 	IN	Timer2		; time counts up to 10 in 1 sec or at 10 Hz 
+           09A : 6FFF;  -- 	ADDI	-1 		; waiting 1/32 of a second 
+           09B : 3099;  -- 	JNEG	WaitingLoop2
+           09C : 8800;  -- 	RETURN
+           09D : 08AD;  -- 	LOAD  Zero
+           09E : 9821;  -- 	OUT   PWM
+           09F : 08C8;  -- 	LOAD Error404Hex1
+           0A0 : 9805;  -- 	OUT  Hex1
+           0A1 : 289D;  -- 	JUMP ErrorHandling ;this is an infinite loop
+           0A2 : 08B0;  -- 	LOAD VelArrIndex
+           0A3 : 6801;  -- 	ADDI 1
+           0A4 : 10B0;  -- 	STORE VelArrIndex
+           0A5 : 08AF;  -- 	LOAD PosArrIndex
+           0A6 : 6801;  -- 	ADDI 1
+           0A7 : 10AF;  -- 	STORE PosArrIndex
+           0A8 : 2809;  -- 	JUMP  VelStart
+           0A9 : 38AC;  -- 	JPOS   Abs_r        ; If already positive, return
+           0AA : 50AE;  --     OR    NegOne       ; Flip all bits
+           0AB : 6801;  --     ADDI   1            ; Add one
+           0AC : 8800;  -- 	RETURN
+           0AD : 0000;  -- Zero:      DW 0
+           0AE : FFFF;  -- NegOne:    DW -1
+           0AF : 0100;  -- PosArrIndex:  DW &H0100
+           0B0 : 0200;  -- VelArrIndex:  DW &H0200
+           0B1 : 021C;  -- Vel1: DW 540  ; doesnt start here
+           0B2 : 021C;  -- Vel2: DW 540
+           0B3 : 0168;  -- Vel3: DW 360
+           0B4 : 021C;  -- Vel4: DW 540
+           0B5 : 0258;  -- Vel5: DW 600
+           0B6 : 010E;  -- Vel6: DW 270
+           0B7 : 0190;  -- Vel7: DW 400
+           0B8 : 0258;  -- Vel8: DW 600
+           0B9 : 0438;  -- Pos1: DW 1080 ; doesnt start here
+           0BA : 0A8C;  -- Pos2: DW 2700
+           0BB : 021C;  -- Pos3: DW 540
+           0BC : 0438;  -- Pos4: DW 1080
+           0BD : 0CA8;  -- Pos5: DW 3240
+           0BE : 10E0;  -- Pos6: DW 4320
+           0BF : 021C;  -- Pos7: DW 540
+           0C0 : 021C;  -- Pso7: DW 540 
+           0C1 : 0000;  -- Countprev:	 	 DW 0
+           0C2 : 0000;  -- OldPos: 		 DW 0 
+           0C3 : 0000;  -- DesiredVel: 	 DW 0 ; 360 = 1 rev in 1.5 seconds
+           0C4 : 0000;  -- CurrVel: 		 DW 0 
+           0C5 : 0028;  -- PWMSpeed: 	     DW 40
+           0C6 : FFFF;  -- Only1:			 DW &B1111111111111111
+           0C7 : 0001;  -- Bit0:            DW &B0000000001
+           0C8 : 00FF;  -- Error404Hex1:	 DW &H00FF 
+           0C9 : FFFF;  -- Error404Hex0:    DW &HFFFF
   END;

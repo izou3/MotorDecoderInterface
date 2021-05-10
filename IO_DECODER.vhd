@@ -24,7 +24,9 @@ ENTITY IO_DECODER IS
 	 INC_EN        : OUT STD_LOGIC;
 	 QUAD_EN       : OUT STD_LOGIC;
 	 PWM_EN		   : OUT STD_LOGIC;
-	 DIRECT_EN		: OUT STD_LOGIC
+	 DIRECT_EN		: OUT STD_LOGIC;
+	 BTN1_EN		   : OUT STD_LOGIC;
+	 TIMER2_EN      : OUT STD_LOGIC
   );
 
 END ENTITY;
@@ -50,5 +52,7 @@ begin
   QUAD_EN      <= '1' WHEN (ADDR_INT = 16#0F1#) and (IO_CYCLE = '1') ELSE '0';
   PWM_EN       <= '1' WHEN (ADDR_INT = 16#021#) and (IO_CYCLE = '1') ELSE '0';
   DIRECT_EN    <= '1' WHEN (ADDR_INT = 16#022#) and (IO_CYCLE = '1') ELSE '0';
+  BTN1_EN    <= '1' WHEN (ADDR_INT = 16#023#) and (IO_CYCLE = '1') ELSE '0';
+  TIMER2_EN     <= '1' WHEN (ADDR_INT = 16#0024#) and (IO_CYCLE = '1') ELSE '0';
       
 END a;

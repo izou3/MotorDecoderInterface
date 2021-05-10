@@ -1,0 +1,50 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 9023;  -- 	IN BTN
+           001 : 3803;  -- 	JPOS Testpos
+           002 : 4006;  -- 	JZERO Testzero
+           003 : B801;  -- 	LOADI 1
+           004 : 9804;  -- 	OUT Hex0 
+           005 : 2800;  -- 	JUMP Start 
+           006 : B805;  -- 	LOADI 5
+           007 : 9804;  -- 	OUT Hex0
+           008 : 2800;  -- 	JUMP Start 
+           009 : 8012;  -- 	CALL	Delay
+           00A : 90F1;  -- 	IN		Quad
+           00B : 201F;  -- 	SUB		OldPos
+           00C : 6005;  -- 	SHIFT	5	
+           00D : 9804;  -- 	OUT		Hex0
+           00E : 1021;  -- 	STORE	CurrVel
+           00F : 90F1;  -- 	IN 		Quad 
+           010 : 101F;  -- 	STORE	OldPos
+           011 : 8800;  -- 	RETURN
+           012 : 9802;  -- 	OUT	Timer ; writing something to timer resets it to 0 
+           013 : 9002;  -- 	IN	Timer		; time counts up to 10 in 1 sec or at 10 Hz 
+           014 : 6FFF;  -- 	ADDI	-1 		; waiting 1/32 of a second 
+           015 : 3013;  -- 	JNEG	WaitingLoop
+           016 : 8800;  -- 	RETURN
+           017 : 0000;  -- Zero:      DW 0
+           018 : FFFF;  -- NegOne:    DW -1
+           019 : 0001;  -- VelControlOn:    DW 1
+           01A : 0000;  -- PosControlOn:	 DW 0
+           01B : 000F;  -- VelControl:      DW &B01111
+           01C : 0019;  -- PosControlSpeed: DW &B11001
+           01D : 021C;  -- PosControl:      DW 540
+           01E : 0000;  -- Countprev:	 	 DW 0
+           01F : 0000;  -- OldPos: 		 DW 0 
+           020 : 010E;  -- DesiredVel: 	 DW 270 ; 360 = 1 rev in 1.5 seconds
+           021 : 0000;  -- CurrVel: 		 DW 0 
+           022 : 0014;  -- PWMSpeed: 	     DW 20
+           023 : 1518;  -- DesiredPos:      DW 5400
+           024 : 0000;  -- Velocity: 		 DW 0 
+  END;

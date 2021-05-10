@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorDecoderInterface/output_files/") File("SCOMP.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/IvanZou/OneDrive/Documents/ECE2031/ProjectSOF/DemoReal/") File("SCOMP.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -220,4 +220,7 @@ set_location_assignment PIN_AB9 -to ENCODER_H2
 set_global_assignment -name VHDL_FILE output_files/PositionControl.vhd
 set_global_assignment -name VHDL_FILE display.vhd
 set_global_assignment -name VHDL_FILE output_files/DirectionControl.vhd
+set_global_assignment -name VHDL_FILE DirectionControl.vhd
+set_global_assignment -name VHDL_FILE Button1.vhd
+set_global_assignment -name VHDL_FILE output_files/Timer2.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -59,6 +59,7 @@ ARCHITECTURE a OF QuadratureDecoder IS
 		IF RESETN = '0' THEN
 			count <= x"0000";
 			Count <= x"0000";
+			Counter <= x"0000"; 
 			state <= init;
 			
 		ELSIF RISING_EDGE(CLK) THEN
