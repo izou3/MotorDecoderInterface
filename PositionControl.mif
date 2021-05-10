@@ -1,0 +1,44 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 081A;  -- 	LOAD VelControlOn
+           001 : 3804;  -- 	JPOS Velocity
+           002 : 081B;  -- 	LOAD PosControlOn
+           003 : 3809;  -- 	JPOS Position
+           004 : 081C;  -- 	LOAD  VelControl 
+           005 : 9821;  -- 	OUT   PWM
+           006 : 90F1;  -- 	IN    Quad
+           007 : 9804;  -- 	OUT   Hex0
+           008 : 2804;  -- 	JUMP  Velocity
+           009 : 9000;  -- 	IN   Switches
+           00A : 9821;  -- 	OUT   PWM
+           00B : 90F1;  -- 	IN 	  Quad
+           00C : 8014;  -- 	CALL  Abs
+           00D : 9804;  -- 	OUT   Hex0
+           00E : 201E;  -- 	SUB   PosControl
+           00F : 4011;  -- 	JZERO End
+           010 : 2809;  -- 	JUMP  Position
+           011 : 0818;  -- 	LOAD  Zero
+           012 : 9821;  -- 	OUT   PWM
+           013 : 2811;  -- 	JUMP  End
+           014 : 3817;  -- 	JPOS   Abs_r        ; If already positive, return
+           015 : 5819;  -- 	XOR    NegOne       ; Flip all bits
+           016 : 6801;  -- 	ADDI   1            ; Add one
+           017 : 8800;  -- 	RETURN
+           018 : 0000;  -- Zero:      DW 0
+           019 : FFFF;  -- NegOne:    DW -1
+           01A : 0000;  -- VelControlOn:    DW 0
+           01B : 0001;  -- PosControlOn:	 DW 1
+           01C : 000F;  -- VelControl:      DW &B01111
+           01D : 0019;  -- PosControlSpeed: DW &B11001
+           01E : 021C;  -- PosControl:      DW 540
+  END;
