@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Mon Apr 19 01:58:36 2021
+Thu Apr 22 02:35:33 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -21,26 +21,29 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  13. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|state
  14. State Machine - |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|state
  15. State Machine - |SCOMP_System|SCOMP:inst|state
- 16. Registers Removed During Synthesis
- 17. General Register Statistics
- 18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_d8s3:auto_generated
- 21. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
- 24. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
- 25. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
- 26. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
- 27. Parameter Settings for User Entity Instance: I2C_INTERFACE:inst13|i2c_master:inst
- 28. Parameter Settings for User Entity Instance: Incrementer:inst10|LPM_BUSTRI:IO_BUS
- 29. Parameter Settings for User Entity Instance: QuadratureDecoder:inst11|LPM_BUSTRI:IO_BUS
- 30. Parameter Settings for User Entity Instance: DirectionControl:inst16|LPM_BUSTRI:IO_BUS
- 31. altpll Parameter Settings by Entity Instance
- 32. altsyncram Parameter Settings by Entity Instance
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 16. User-Specified and Inferred Latches
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_0is3:auto_generated
+ 22. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_CLSHIFT:shifter
+ 25. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
+ 26. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
+ 27. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
+ 28. Parameter Settings for User Entity Instance: I2C_INTERFACE:inst13|i2c_master:inst
+ 29. Parameter Settings for User Entity Instance: Incrementer:inst10|LPM_BUSTRI:IO_BUS
+ 30. Parameter Settings for User Entity Instance: QuadratureDecoder:inst11|LPM_BUSTRI:IO_BUS
+ 31. Parameter Settings for User Entity Instance: DirectionControl:inst16|LPM_BUSTRI:IO_BUS
+ 32. Parameter Settings for User Entity Instance: button1:inst17|LPM_BUSTRI:IO_BUS
+ 33. Parameter Settings for User Entity Instance: TIMER2:inst18|LPM_BUSTRI:IO_BUS
+ 34. altpll Parameter Settings by Entity Instance
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -67,15 +70,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 19 01:58:36 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 22 02:35:32 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,247                                       ;
-;     Total combinational functions  ; 1,094                                       ;
-;     Dedicated logic registers      ; 517                                         ;
-; Total registers                    ; 517                                         ;
+; Total logic elements               ; 1,524                                       ;
+;     Total combinational functions  ; 1,367                                       ;
+;     Dedicated logic registers      ; 602                                         ;
+; Total registers                    ; 602                                         ;
 ; Total pins                         ; 75                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,768                                      ;
@@ -186,55 +189,57 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/I2C_INTERFACE.bdf      ;         ;
-; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/i2c_master.vhd         ;         ;
-; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/i2c_ctrl.vhd           ;         ;
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/HEX_DISP.vhd           ;         ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_OUT.vhd            ;         ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_IN.vhd             ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/clk_div.vhd            ;         ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/TIMER.vhd              ;         ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/IO_DECODER.vhd         ;         ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd              ;         ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP_System.bdf       ;         ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/PLL_main.vhd           ;         ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/HEX_DISP_6.bdf         ;         ;
-; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/Incrementer.vhd        ;         ;
-; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/QuadratureDecoder.vhd  ;         ;
-; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/PWMGenerator.vhd       ;         ;
-; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/display.vhd            ;         ;
-; DirectionControl.vhd             ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd   ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf                                 ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/aglobal191.inc                             ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_pll.inc                            ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratixii_pll.inc                          ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/cycloneii_pll.inc                          ;         ;
-; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/pll_main_altpll.v   ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf                             ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_ram_block.inc                      ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_mux.inc                                ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_decode.inc                             ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/a_rdenreg.inc                              ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altrom.inc                                 ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altram.inc                                 ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altdpram.inc                               ;         ;
-; db/altsyncram_d8s3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/altsyncram_d8s3.tdf ;         ;
-; peripvelocity.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/peripvelocity.mif      ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf                            ;         ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/lpm_clshift_fuc.tdf ;         ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_bustri.tdf                             ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/I2C_INTERFACE.bdf       ;         ;
+; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/i2c_master.vhd          ;         ;
+; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/i2c_ctrl.vhd            ;         ;
+; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/HEX_DISP.vhd            ;         ;
+; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_OUT.vhd             ;         ;
+; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_IN.vhd              ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/clk_div.vhd             ;         ;
+; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/TIMER.vhd               ;         ;
+; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/IO_DECODER.vhd          ;         ;
+; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd               ;         ;
+; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP_System.bdf        ;         ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/PLL_main.vhd            ;         ;
+; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/HEX_DISP_6.bdf          ;         ;
+; Incrementer.vhd                  ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/Incrementer.vhd         ;         ;
+; QuadratureDecoder.vhd            ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/QuadratureDecoder.vhd   ;         ;
+; PWMGenerator.vhd                 ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/PWMGenerator.vhd        ;         ;
+; display.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/display.vhd             ;         ;
+; DirectionControl.vhd             ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd    ;         ;
+; Button1.vhd                      ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/Button1.vhd             ;         ;
+; output_files/Timer2.vhd          ; yes             ; User VHDL File                         ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/output_files/Timer2.vhd ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altpll.tdf                                  ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/aglobal191.inc                              ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_pll.inc                             ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratixii_pll.inc                           ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/cycloneii_pll.inc                           ;         ;
+; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/pll_main_altpll.v    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altram.inc                                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
+; db/altsyncram_0is3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/altsyncram_0is3.tdf  ;         ;
+; directioncontrol.mif             ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/directioncontrol.mif    ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_clshift.tdf                             ;         ;
+; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/lpm_clshift_fuc.tdf  ;         ;
+; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/lpm_bustri.tdf                              ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -242,20 +247,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,247                                                                                  ;
+; Estimated Total logic elements              ; 1,524                                                                                  ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 1094                                                                                   ;
+; Total combinational functions               ; 1367                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 650                                                                                    ;
-;     -- 3 input functions                    ; 304                                                                                    ;
-;     -- <=2 input functions                  ; 140                                                                                    ;
+;     -- 4 input functions                    ; 708                                                                                    ;
+;     -- 3 input functions                    ; 346                                                                                    ;
+;     -- <=2 input functions                  ; 313                                                                                    ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 991                                                                                    ;
-;     -- arithmetic mode                      ; 103                                                                                    ;
+;     -- normal mode                          ; 1116                                                                                   ;
+;     -- arithmetic mode                      ; 251                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 517                                                                                    ;
-;     -- Dedicated logic registers            ; 517                                                                                    ;
+; Total registers                             ; 602                                                                                    ;
+;     -- Dedicated logic registers            ; 602                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 75                                                                                     ;
@@ -267,9 +272,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 324                                                                                    ;
-; Total fan-out                               ; 5700                                                                                   ;
-; Average fan-out                             ; 3.20                                                                                   ;
+; Maximum fan-out                             ; 386                                                                                    ;
+; Total fan-out                               ; 6646                                                                                   ;
+; Average fan-out                             ; 3.11                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -278,11 +283,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
-; |SCOMP_System                             ; 1094 (0)            ; 517 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
+; |SCOMP_System                             ; 1367 (0)            ; 602 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SCOMP_System                                                                           ; SCOMP_System      ; work         ;
 ;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_IN:inst7                                                              ; DIG_IN            ; work         ;
-;    |DirectionControl:inst16|              ; 45 (30)             ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DirectionControl:inst16                                                   ; DirectionControl  ; work         ;
-;       |lpm_bustri:IO_BUS|                 ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DirectionControl:inst16|lpm_bustri:IO_BUS                                 ; lpm_bustri        ; work         ;
-;    |Display:inst15|                       ; 88 (88)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Display:inst15                                                            ; Display           ; work         ;
+;    |DirectionControl:inst16|              ; 108 (107)           ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DirectionControl:inst16                                                   ; DirectionControl  ; work         ;
+;       |lpm_bustri:IO_BUS|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DirectionControl:inst16|lpm_bustri:IO_BUS                                 ; lpm_bustri        ; work         ;
+;    |Display:inst15|                       ; 232 (232)           ; 53 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Display:inst15                                                            ; Display           ; work         ;
 ;    |HEX_DISP_6:inst9|                     ; 42 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6        ; work         ;
 ;       |HEX_DISP:inst1|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst2|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP          ; work         ;
@@ -290,34 +295,36 @@ https://fpgasoftware.intel.com/eula.
 ;       |HEX_DISP:inst4|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst5|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP          ; work         ;
 ;       |HEX_DISP:inst6|                    ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP          ; work         ;
-;    |I2C_INTERFACE:inst13|                 ; 249 (90)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
-;       |i2c_ctrl:inst14|                   ; 58 (58)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl          ; work         ;
+;    |I2C_INTERFACE:inst13|                 ; 263 (103)           ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE     ; work         ;
+;       |i2c_ctrl:inst14|                   ; 59 (59)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl          ; work         ;
 ;       |i2c_master:inst|                   ; 101 (101)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                      ; i2c_master        ; work         ;
 ;    |IO_DECODER:inst3|                     ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER        ; work         ;
 ;    |Incrementer:inst10|                   ; 17 (17)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Incrementer:inst10                                                        ; Incrementer       ; work         ;
 ;    |PLL_main:inst1|                       ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1                                                            ; PLL_main          ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                    ; altpll            ; work         ;
 ;          |PLL_main_altpll:auto_generated| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated     ; PLL_main_altpll   ; work         ;
-;    |PWM_GEN:inst14|                       ; 10 (10)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PWM_GEN:inst14                                                            ; PWM_GEN           ; work         ;
-;    |QuadratureDecoder:inst11|             ; 56 (56)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
-;    |SCOMP:inst|                           ; 502 (423)           ; 177 (177)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
+;    |PWM_GEN:inst14|                       ; 12 (12)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PWM_GEN:inst14                                                            ; PWM_GEN           ; work         ;
+;    |QuadratureDecoder:inst11|             ; 55 (55)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|QuadratureDecoder:inst11                                                  ; QuadratureDecoder ; work         ;
+;    |SCOMP:inst|                           ; 493 (416)           ; 177 (177)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
-;          |altsyncram_d8s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_d8s3:auto_generated ; altsyncram_d8s3   ; work         ;
-;       |lpm_clshift:shifter|               ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 79 (79)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
+;          |altsyncram_0is3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_0is3:auto_generated ; altsyncram_0is3   ; work         ;
+;       |lpm_clshift:shifter|               ; 77 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift       ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 77 (77)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc   ; work         ;
+;    |TIMER2:inst18|                        ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER2:inst18                                                             ; TIMER2            ; work         ;
 ;    |TIMER:inst4|                          ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER             ; work         ;
-;    |clk_div:inst5|                        ; 47 (47)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div           ; work         ;
+;    |button1:inst17|                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|button1:inst17                                                            ; button1           ; work         ;
+;    |clk_div:inst5|                        ; 88 (88)             ; 72 (72)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div           ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                  ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
-; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF               ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_d8s3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; PeripVelocity.mif ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------+
+; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                  ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------+
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_0is3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; DirectionControl.mif ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -447,21 +454,52 @@ Encoding Type:  One-Hot
 +------------------+---------------+--------------+--------------+-------------+----------------+--------------+-------------+--------------+-----------------+---------------+---------------+----------------+---------------+---------------+--------------+---------------+--------------+----------------+------------------+-----------------+----------------+-----------------+----------------+---------------+--------------+--------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+-----------------------------------------------+-------------------------------------------+
-; Register name                                 ; Reason for Removal                        ;
-+-----------------------------------------------+-------------------------------------------+
-; DirectionControl:inst16|Quad[16..30]          ; Stuck at GND due to stuck port data_in    ;
-; I2C_INTERFACE:inst13|i2c_master:inst|scl_clk  ; Stuck at GND due to stuck port data_in    ;
-; DIG_IN:inst7|B_DI[10..15]                     ; Stuck at GND due to stuck port data_in    ;
-; I2C_INTERFACE:inst13|i2c_master:inst|count[2] ; Stuck at GND due to stuck port data_in    ;
-; SCOMP:inst|state.ex_nop                       ; Lost fanout                               ;
-; Incrementer:inst10|state.BTN_low              ; Lost fanout                               ;
-; QuadratureDecoder:inst11|state.init           ; Merged with Incrementer:inst10|state.Init ;
-; SCOMP:inst|state.init                         ; Merged with Incrementer:inst10|state.Init ;
-; Total Number of Removed Registers = 27        ;                                           ;
-+-----------------------------------------------+-------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; DirectionControl:inst16|DesiredPos[15]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[14]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[13]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[12]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[11]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[10]              ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[9]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[8]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[7]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[6]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[5]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[4]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[3]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[2]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[1]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; DirectionControl:inst16|DesiredPos[0]               ; DirectionControl:inst16|IO_Handler ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++-----------------------------------------------+---------------------------------------------------+
+; Register name                                 ; Reason for Removal                                ;
++-----------------------------------------------+---------------------------------------------------+
+; button1:inst17|count[1..15]                   ; Stuck at GND due to stuck port data_in            ;
+; DirectionControl:inst16|StableVel[2..15]      ; Stuck at GND due to stuck port data_in            ;
+; DirectionControl:inst16|Quad[16..30]          ; Stuck at GND due to stuck port data_in            ;
+; DirectionControl:inst16|DesPosVar[16..30]     ; Stuck at GND due to stuck port data_in            ;
+; I2C_INTERFACE:inst13|i2c_master:inst|scl_clk  ; Stuck at GND due to stuck port data_in            ;
+; DIG_IN:inst7|B_DI[10..15]                     ; Stuck at GND due to stuck port data_in            ;
+; DirectionControl:inst16|Quad[31]              ; Merged with DirectionControl:inst16|DesPosVar[31] ;
+; I2C_INTERFACE:inst13|i2c_master:inst|count[2] ; Stuck at GND due to stuck port data_in            ;
+; SCOMP:inst|state.ex_nop                       ; Lost fanout                                       ;
+; Incrementer:inst10|state.BTN_low              ; Lost fanout                                       ;
+; QuadratureDecoder:inst11|state.init           ; Merged with Incrementer:inst10|state.Init         ;
+; SCOMP:inst|state.init                         ; Merged with Incrementer:inst10|state.Init         ;
+; DirectionControl:inst16|StableVel[1]          ; Merged with DirectionControl:inst16|StableVel[0]  ;
+; Total Number of Removed Registers = 73        ;                                                   ;
++-----------------------------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -469,10 +507,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 517   ;
-; Number of registers using Synchronous Clear  ; 33    ;
+; Total registers                              ; 602   ;
+; Number of registers using Synchronous Clear  ; 62    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 194   ;
+; Number of registers using Asynchronous Clear ; 261   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 302   ;
 ; Number of registers using Preset             ; 0     ;
@@ -484,13 +522,14 @@ Encoding Type:  One-Hot
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
-; DirectionControl:inst16|Quad[0]                 ; 1       ;
-; DirectionControl:inst16|Quad[31]                ; 18      ;
+; DirectionControl:inst16|Quad[0]                 ; 2       ;
+; DirectionControl:inst16|DesPosVar[0]            ; 2       ;
+; DirectionControl:inst16|DesPosVar[31]           ; 3       ;
 ; I2C_INTERFACE:inst13|i2c_master:inst|sda_int    ; 2       ;
 ; I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[2] ; 16      ;
 ; I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[1] ; 30      ;
 ; I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[0] ; 25      ;
-; Total number of inverted registers = 6          ;         ;
+; Total number of inverted registers = 7          ;         ;
 +-------------------------------------------------+---------+
 
 
@@ -499,27 +538,29 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[8][5]                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|data_tx[7]   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|Counter[10]              ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[2]   ;
-; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[6]                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[0]   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[15] ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|Incrementer:inst10|count[9]                       ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[2][5]                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[1]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|Counter[8]               ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[1]   ;
+; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[10]                                 ;
+; 22:1               ; 30 bits   ; 420 LEs       ; 30 LEs               ; 390 LEs                ; Yes        ; |SCOMP_System|Display:inst15|Tracker[30]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[2]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[12] ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|Incrementer:inst10|count[8]                       ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[2]  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|count[9]                 ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[1]                                  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|QuadratureDecoder:inst11|count[13]                ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[10]                                 ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 2 LEs                ; 26 LEs                 ; Yes        ; |SCOMP_System|Display:inst15|Tracker[0]                         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|count        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|Incrementer:inst10|Selector2                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector0                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|Incrementer:inst10|Selector1                      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector3                ;
 ; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |SCOMP_System|SCOMP:inst|Add1                                   ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector2                ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |SCOMP_System|QuadratureDecoder:inst11|Selector4                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_d8s3:auto_generated ;
+; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_0is3:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -944,7 +985,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
-; INIT_FILE                          ; PeripVelocity.mif    ; Untyped                     ;
+; INIT_FILE                          ; DirectionControl.mif ; Untyped                     ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
@@ -957,7 +998,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_d8s3      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_0is3      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1047,6 +1088,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button1:inst17|LPM_BUSTRI:IO_BUS ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TIMER2:inst18|LPM_BUSTRI:IO_BUS ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                           ;
 +-------------------------------+----------------------------------------+
@@ -1090,28 +1151,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 75                          ;
-; cycloneiii_ff         ; 517                         ;
-;     CLR               ; 151                         ;
-;     ENA               ; 259                         ;
-;     ENA CLR           ; 43                          ;
-;     SCLR              ; 33                          ;
-;     plain             ; 31                          ;
+; cycloneiii_ff         ; 602                         ;
+;     CLR               ; 202                         ;
+;     ENA               ; 243                         ;
+;     ENA CLR           ; 59                          ;
+;     SCLR              ; 62                          ;
+;     plain             ; 36                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 1101                        ;
-;     arith             ; 103                         ;
-;         2 data inputs ; 71                          ;
-;         3 data inputs ; 32                          ;
-;     normal            ; 998                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 56                          ;
-;         3 data inputs ; 272                         ;
-;         4 data inputs ; 650                         ;
+; cycloneiii_lcell_comb ; 1374                        ;
+;     arith             ; 251                         ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 173                         ;
+;         3 data inputs ; 63                          ;
+;     normal            ; 1123                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 104                         ;
+;         3 data inputs ; 283                         ;
+;         4 data inputs ; 708                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.87                        ;
+; Max LUT depth         ; 10.50                       ;
+; Average LUT depth     ; 4.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1120,7 +1182,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -1130,7 +1192,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Apr 19 01:58:02 2021
+    Info: Processing started: Thu Apr 22 02:35:01 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_interface.bdf
@@ -1151,13 +1213,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file dig_in.
     Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_IN.vhd Line: 18
     Info (12023): Found entity 1: DIG_IN File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DIG_IN.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/clk_div.vhd Line: 21
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/clk_div.vhd Line: 22
     Info (12023): Found entity 1: clk_div File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/clk_div.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
     Info (12022): Found design unit 1: TIMER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/TIMER.vhd Line: 27
     Info (12023): Found entity 1: TIMER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/IO_DECODER.vhd Line: 32
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/IO_DECODER.vhd Line: 34
     Info (12023): Found entity 1: IO_DECODER File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
     Info (12022): Found design unit 1: SCOMP-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 34
@@ -1184,9 +1246,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: Display File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/display.vhd Line: 10
 Warning (12019): Can't analyze file -- file output_files/DirectionControl.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file directioncontrol.vhd
-    Info (12022): Found design unit 1: DirectionControl-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 28
+    Info (12022): Found design unit 1: DirectionControl-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 29
     Info (12023): Found entity 1: DirectionControl File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file button1.vhd
+    Info (12022): Found design unit 1: button1-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/Button1.vhd Line: 23
+    Info (12023): Found entity 1: button1 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/Button1.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/timer2.vhd
+    Info (12022): Found design unit 1: TIMER2-a File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/output_files/Timer2.vhd Line: 27
+    Info (12023): Found entity 1: TIMER2 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/output_files/Timer2.vhd Line: 17
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
+Warning (275011): Block or symbol "DIG_OUT" of instance "inst6" overlaps another block or symbol
 Info (12128): Elaborating entity "PWM_GEN" for hierarchy "PWM_GEN:inst14"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
@@ -1276,7 +1345,7 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "PeripVelocity.mif"
+    Info (12134): Parameter "init_file" = "DirectionControl.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "2048"
@@ -1306,9 +1375,9 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d8s3.tdf
-    Info (12023): Found entity 1: altsyncram_d8s3 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/altsyncram_d8s3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_d8s3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_d8s3:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0is3.tdf
+    Info (12023): Found entity 1: altsyncram_0is3 File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/db/altsyncram_0is3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_0is3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_0is3:auto_generated" File: c:/users/ivanzou/quartuslite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 89
 Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 89
 Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 89
@@ -1335,7 +1404,28 @@ Info (12128): Elaborating entity "i2c_ctrl" for hierarchy "I2C_INTERFACE:inst13|
 Info (12128): Elaborating entity "Incrementer" for hierarchy "Incrementer:inst10"
 Info (12128): Elaborating entity "QuadratureDecoder" for hierarchy "QuadratureDecoder:inst11"
 Info (12128): Elaborating entity "DirectionControl" for hierarchy "DirectionControl:inst16"
-Warning (10036): Verilog HDL or VHDL warning at DirectionControl.vhd(29): object "COUNT" assigned a value but never read File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at DirectionControl.vhd(64): signal "IO_WRITE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at DirectionControl.vhd(67): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at DirectionControl.vhd(59): inferring latch(es) for signal or variable "DesiredPos", which holds its previous value in one or more paths through the process File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[0]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[1]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[2]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[3]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[4]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[5]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[6]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[7]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[8]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[9]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[10]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[11]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[12]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[13]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[14]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (10041): Inferred latch for "DesiredPos[15]" at DirectionControl.vhd(59) File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+Info (12128): Elaborating entity "button1" for hierarchy "button1:inst17"
+Info (12128): Elaborating entity "TIMER2" for hierarchy "TIMER2:inst18"
+Warning (10631): VHDL Process Statement warning at Timer2.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/output_files/Timer2.vhd Line: 59
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
 Info (12128): Elaborating entity "Display" for hierarchy "Display:inst15"
@@ -1346,7 +1436,7 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[2]" to the node "PWM_GEN:inst14|COMPARE[2]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[3]" to the node "PWM_GEN:inst14|COMPARE[3]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[4]" to the node "PWM_GEN:inst14|COMPARE[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[5]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[5]" to the node "PWM_GEN:inst14|COMPARE[5]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[6]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[6]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[7]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[7]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[8]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[8]" into an OR gate
@@ -1357,26 +1447,61 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[14]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[15]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15]" into an OR gate
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[15] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[14] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[13] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[12] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[11] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[10] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[9] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[8] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[7] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[6] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[5] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[4] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[3] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[2] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[1] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
+Warning (13012): Latch DirectionControl:inst16|DesiredPos[0] has unsafe behavior File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/DirectionControl.vhd Line: 59
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCOMP:inst|IO_WRITE_int File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/SCOMP.vhd Line: 57
 Info (13000): Registers with preset signals will power-up high File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/i2c_master.vhd Line: 57
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GSENSOR_CS_n" is stuck at VCC
     Warning (13410): Pin "GSENSOR_SDO" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register Display:inst15|Tracker[31] will power up to Low File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/display.vhd Line: 41
+    Critical Warning (18010): Register Display:inst15|Tracker[0] will power up to Low File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/display.vhd Line: 41
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1359 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1653 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 58 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1267 logic cells
+    Info (21061): Implemented 1561 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Mon Apr 19 01:58:36 2021
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:01:01
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Thu Apr 22 02:35:33 2021
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:57
 
 

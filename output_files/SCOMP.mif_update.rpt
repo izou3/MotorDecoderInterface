@@ -1,5 +1,5 @@
 MIF/HEX Update report for SCOMP
-Mon Apr 19 01:25:27 2021
+Thu Apr 22 02:57:47 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Mon Apr 19 01:25:27 2021 ;
+; MIF/HEX Update Status ; Successful - Thu Apr 22 02:57:47 2021 ;
 ; Revision Name         ; SCOMP                                 ;
 ; Top-level Entity Name ; SCOMP_System                          ;
 ; Family                ; MAX 10                                ;
@@ -44,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; MIF/HEX Update Processed Files                                                                     ;
-+----------------------------------------------------------------------------------------------------+
-; File Name                                                                                          ;
-+----------------------------------------------------------------------------------------------------+
-; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/peripvelocity.mif ;
-+----------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                        ;
++-------------------------------------------------------------------------------------------------------+
+; File Name                                                                                             ;
++-------------------------------------------------------------------------------------------------------+
+; C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/directioncontrol.mif ;
++-------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------+
@@ -59,9 +59,9 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Apr 19 01:25:24 2021
+    Info: Processing started: Thu Apr 22 02:57:45 2021
 Info: Command: quartus_cdb SCOMP -c SCOMP --update_mif
-Warning (113031): 35 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 35 warnings found, and 10 warnings are reported. File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/peripvelocity.mif Line: 1
+Warning (113031): 202 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 202 warnings found, and 10 warnings are reported. File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/directioncontrol.mif Line: 1
     Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/ Line: 13
     Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/ Line: 14
     Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/ Line: 15
@@ -73,11 +73,11 @@ Warning (113031): 35 out of 2048 addresses are reinitialized. The latest initial
     Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/ Line: 21
     Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/ Line: 22
 Info (39024): Processed the following Memory Initialization File(s)
-    Info (39025): Processed Memory Initialization File C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/peripvelocity.mif File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/peripvelocity.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/directioncontrol.mif File: C:/Users/IvanZou/OneDrive/Documents/ECE2031/MotorInterface/MotorDecoderInterface/directioncontrol.mif Line: 0
 Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Mon Apr 19 01:25:27 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Thu Apr 22 02:57:47 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

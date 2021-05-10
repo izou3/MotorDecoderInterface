@@ -27,6 +27,7 @@ END Display;
 
 ARCHITECTURE a OF Display IS
 	SIGNAL Counter    : integer;
+	SIGNAL Tracker		: integer;
 	TYPE state_type is (zero, one, two, three, four, five, six, seven, eight, nine, ten);
 	SIGNAL state : state_type;
 	
@@ -48,7 +49,8 @@ ARCHITECTURE a OF Display IS
 			LED6 <= '0';
 			LED7 <= '0';
 			LED8 <= '0';
-			LED9 <= '0';	
+			LED9 <= '0';
+			Tracker <= 0;
 			
 		ELSIF RISING_EDGE(CLK) THEN
 
@@ -57,7 +59,18 @@ ARCHITECTURE a OF Display IS
 				WHEN zero =>
 					IF Counter < 540 THEN
 						state <= zero;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED0<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED0<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= one;
 						LED0<='1';
 					END IF;
@@ -66,9 +79,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 540 THEN
 						state <= zero;
 						LED0<='0';
+						LED1 <= '0'; 
+						Tracker<=0;
 					ELSE IF Counter < 1080 THEN
 						state <= one;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED1<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED1<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= two;
 						LED1<='1';
 					END IF;
@@ -78,9 +104,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 1080 THEN
 						state <= one;
 						LED1<='0';
+						LED2 <= '0'; 
+						Tracker<=0;
 					ELSE IF Counter < 1620  THEN
 						state <= two;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED2<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED2<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= three;
 						LED2<='1';
 					END IF;
@@ -90,9 +129,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 1620 THEN
 						state <= two;
 						LED2<='0';
+						LED3 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 2160  THEN
 						state <= three;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED3<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED3<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= four;
 						LED3<='1';
 					END IF;
@@ -102,9 +154,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 2160 THEN
 						state <= three;
 						LED3<='0';
+						LED4 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 2700  THEN
 						state <= four;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED4<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED4<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= five;
 						LED4<='1';
 					END IF;
@@ -114,9 +179,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 2700 THEN
 						state <= four;
 						LED4<='0';
+						LED5 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 3240  THEN
 						state <= five;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED5<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED5<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= six;
 						LED5<='1';
 					END IF;
@@ -126,9 +204,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 3240 THEN
 						state <= five;
 						LED5<='0';
+						LED6 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 3780  THEN
 						state <= six;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED6<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED6<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= seven;
 						LED6<='1';
 					END IF;
@@ -138,9 +229,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 3780 THEN
 						state <= six;
 						LED6<='0';
+						LED7 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 4320  THEN
 						state <= seven;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED7<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED7<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= eight;
 						LED7<='1';
 					END IF;
@@ -150,9 +254,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 4320 THEN
 						state <= seven;
 						LED7<='0';
+						LED8 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 4860  THEN
 						state <= eight;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED8<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED8<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= nine;
 						LED8<='1';
 					END IF;
@@ -162,9 +279,22 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 5400 THEN
 						state <= eight;
 						LED8<='0';
+						LED9 <= '0';
+						Tracker<=0;
 					ELSE IF Counter < 5940  THEN
 						state <= nine;
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED9<= '1';
+						ELSE IF Tracker < 2000000 THEN
+							LED9<= '0';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 					ELSE
+						Tracker<=0;
 						state <= ten;
 						LED9<='1';
 					END IF;
@@ -174,7 +304,18 @@ ARCHITECTURE a OF Display IS
 					IF Counter < 5940 THEN
 						state <= nine;
 						LED9<='0';
+						Tracker<=0;
 					ELSE
+						Tracker <= Tracker + 1;
+						IF Tracker < 1000000 THEN
+							LED9<= '0';
+						ELSE IF Tracker < 2000000 THEN
+							LED9<= '1';
+						END IF;
+						END IF;
+						IF Tracker > 2000000 THEN
+							Tracker<= 0;
+						END IF;
 						state <= ten;
 					END IF;	
 				WHEN OTHERs =>

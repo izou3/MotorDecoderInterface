@@ -5,15 +5,23 @@ ORG 0
 Start:
 	LOADI 15
 	OUT Hex1
-	LOADI 1       ; forward directon 
+	LOAD DesiredPos       ; load in count value forward directon 
 	OUT   Direct
+	
+ActualStart: 
 	IN    Switches
 	OUT   PWM
 	; ; 
-	IN Direct 
-	OUT Hex0 
+	
+	CALL ReadVelocity
+	LOAD  CurrVel
+	OUT Hex0
+	; CALL Delay
+	;IN Direct 
+	; SHIFT 5 
+	;OUT Hex0 
 		
-	JUMP  Start 
+	JUMP  ActualStart 
 	
 	
 ReadVelocity:
@@ -43,6 +51,7 @@ Hex0:      EQU &H004
 Hex1:	   EQU &H005
 PWM:       EQU &H021
 Direct:    EQU &H022
+BTN:    EQU &H023
 Quad:      EQU &H0F1
 Timer:	   EQU &H002
 
@@ -61,3 +70,5 @@ OldPos: 		 DW 0
 DesiredVel: 	 DW 270 ; 360 = 1 rev in 1.5 seconds
 CurrVel: 		 DW 0 
 PWMSpeed: 	     DW 20
+DesiredPos:      DW 5400
+Velocity: 		 DW 0 
